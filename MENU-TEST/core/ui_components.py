@@ -634,3 +634,199 @@ def create_menubar(parent: tk.Widget) -> MenuBar:
         菜單欄實例
     """
     return MenuBar(parent)
+
+
+class EmojiPicker:
+    """
+    表情符號選擇器組件
+    提供表情符號選擇介面
+    """
+
+    # 表情符號分類
+    EMOJI_CATEGORIES = {
+        "日常互動": ["🙂", "😄", "😌", "😎", "🤓", "😅"],
+        "角色語氣": ["😇", "🤖", "🧙‍♂️", "🧝‍♀️", "🧛‍♂️"],
+        "成就里程碑": ["🥳", "🎊", "🏆", "🪄"],
+        "結構修復": ["🧱", "🧠", "🛠️", "🧬", "🪞", "🧰", "🧭"],
+        "排程模組": ["📦", "📋", "📐", "🗂️", "🗃️", "🧾"],
+        "語氣節奏": ["🌀", "🔁", "🧘", "🪶", "🧊", "🔥", "🪩"],
+        "成長里程": ["🎉", "🥂", "🪄", "🏗️", "🧑‍🎓", "🫀"]
+    }
+
+    def __init__(self, parent: tk.Widget, name: str, x: int, y: int,
+                 width: int, height: int, config: Dict[str, Any] = None):
+        """
+        初始化表情符號選擇器
+
+        Args:
+            parent: 父容器
+            name: 組件名稱
+            x, y: 位置
+            width, height: 尺寸
+            config: 配置參數
+        """
+        self.name = name
+        self.config = config or {}
+        self.selected_emoji = None
+        self.on_select_callback = None
+
+        # 創建主框架
+        self.frame = tk.Frame(
+            parent,
+            bg=self.config.get('bg', DEFAULT_COLORS['LIGHT_BG']),
+            relief='raised',
+            borderwidth=2
+        )
+        self.frame.place(x=x, y=y, width=width, height=height)
+
+        # 創建標題
+        title_text = self.config.get('title', '表情符號選擇器')
+        self.title_label = tk.Label(
+            self.frame,
+            text=title_text,
+            bg=self.config.get('bg', DEFAULT_COLORS['LIGHT_BG']),
+            fg=self.config.get('color', DEFAULT_COLORS['BLACK']),
+            font=self.config.get('font', DEFAULT_FONTS['HEADER'])
+        )
+        self.title_label.pack(pady=5)
+
+        # 創建分類選擇器
+        self.category_var = tk.StringVar()
+        self.category_combo = ttk.Combobox(
+            self.frame,
+            textvariable=self.category_var,
+            values=list(self.EMOJI_CATEGORIES.keys()),
+            state='readonly',
+            font=DEFAULT_FONTS['PRIMARY']
+        )
+        self.category_combo.pack(pady=5, padx=10, fill='x')
+        self.category_combo.bind('<<ComboboxSelected>>', self._on_category_change)
+
+        # 創建表情符號區域
+        self.emoji_frame = tk.Frame(self.frame, bg=DEFAULT_COLORS['LIGHT_BG'])
+        self.emoji_frame.pack(fill='both', expand=True, padx=10, pady=5)
+
+        # 創建表情符號按鈕容器
+        self.emoji_buttons = []
+
+        # 創建選擇顯示區域
+        self.selection_label = tk.Label(
+            self.frame,
+            text="請選擇表情符號",
+            bg=DEFAULT_COLORS['SECONDARY_BG'],
+            fg=DEFAULT_COLORS['WHITE'],
+            font=DEFAULT_FONTS['PRIMARY'],
+            relief='sunken',
+            height=2
+        )
+        self.selection_label.pack(fill='x', padx=10, pady=5)
+
+        # 預設選擇第一個分類
+        if self.EMOJI_CATEGORIES:
+            self.category_var.set(list(self.EMOJI_CATEGORIES.keys())[0])
+            self._on_category_change()
+
+        logger.debug(f"創建表情符號選擇器: {name}")
+
+    def _on_category_change(self, event=None):
+        """分類改變事件"""
+        category = self.category_var.get()
+        if category in self.EMOJI_CATEGORIES:
+            self._display_emojis(category)
+
+    def _display_emojis(self, category: str):
+        """顯示分類的表情符號"""
+        # 清除現有按鈕
+        for button in self.emoji_buttons:
+            button.destroy()
+        self.emoji_buttons.clear()
+
+        emojis = self.EMOJI_CATEGORIES[category]
+
+        # 創建表情符號按鈕網格
+        for i, emoji in enumerate(emojis):
+            row = i // 6  # 每行6個
+            col = i % 6
+
+            button = tk.Button(
+                self.emoji_frame,
+                text=emoji,
+                font=('Arial', 16),  # 表情符號需要大字體
+                command=lambda e=emoji: self._on_emoji_select(e),
+                bg=DEFAULT_COLORS['LIGHT_BG'],
+                relief='flat',
+                width=3,
+                height=1
+            )
+            button.grid(row=row, column=col, padx=2, pady=2)
+            self.emoji_buttons.append(button)
+
+    def _on_emoji_select(self, emoji: str):
+        """表情符號選擇事件"""
+        self.selected_emoji = emoji
+        self.selection_label.config(text=f"已選擇: {emoji}")
+
+        # 調用回調函數
+        if self.on_select_callback:
+            self.on_select_callback(emoji)
+
+        logger.debug(f"選擇表情符號: {emoji}")
+
+    def set_on_select_callback(self, callback: Callable):
+        """
+        設置選擇回調函數
+
+        Args:
+            callback: 回調函數，參數為選擇的表情符號
+        """
+        self.on_select_callback = callback
+
+    def get_selected_emoji(self) -> Optional[str]:
+        """
+        獲取當前選擇的表情符號
+
+        Returns:
+            選擇的表情符號或None
+        """
+        return self.selected_emoji
+
+    def clear_selection(self):
+        """清除選擇"""
+        self.selected_emoji = None
+        self.selection_label.config(text="請選擇表情符號")
+
+    def update_config(self, config: Dict[str, Any]):
+        """
+        更新配置
+
+        Args:
+            config: 新的配置
+        """
+        self.config.update(config)
+
+        # 更新標題
+        if 'title' in config:
+            self.title_label.config(text=config['title'])
+
+        # 更新背景色
+        if 'bg' in config:
+            self.frame.config(bg=config['bg'])
+            self.title_label.config(bg=config['bg'])
+
+
+def create_emoji_picker(parent: tk.Widget, name: str, x: int, y: int,
+                       width: int, height: int, **config) -> EmojiPicker:
+    """
+    創建表情符號選擇器的便捷函數
+
+    Args:
+        parent: 父容器
+        name: 組件名稱
+        x, y: 位置
+        width, height: 尺寸
+        **config: 配置參數
+
+    Returns:
+        表情符號選擇器實例
+    """
+    return EmojiPicker(parent, name, x, y, width, height, config)

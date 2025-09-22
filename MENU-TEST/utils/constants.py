@@ -135,9 +135,10 @@ WARNING_MESSAGES = {
 # 文件路徑常量
 PATHS = {
     'CONFIG_DIR': 'config',
-    'EXAMPLES_DIR': 'examples',
+    'EXAMPLES_DIR': 'examples', 
     'PLUGINS_DIR': 'plugins',
-    'LOGS_DIR': 'logs'
+    'LOGS_DIR': 'logs',
+    'TEMP_DIR': 'temp'
 }
 
 # 日誌級別常量
@@ -158,25 +159,27 @@ CONFIG_FILES = {
 
 # 指令別名映射
 COMMAND_ALIASES = {
+    # 基本指令別名
     "win": "window",
     "ctrl": "control",
-    "api-set": "API設定",
-    "api-call": "API呼叫",
-    "api": "API設定",
-    "api-preset": "API預設",
-    "api-call-preset": "API呼叫預設",
+
+    # API 相關別名
+    "api-set": "api-set",
+    "api-call": "api-call",
+
+    # 顯示相關別名
     "display-area": "顯示區域",
     "display-content": "顯示內容",
     "display-text": "顯示文字",
+    "clear-display": "清除顯示",
+
+    # 其他功能別名
     "set-language": "設定語言",
     "generate-code": "生成代碼",
-    "clear-display": "清除顯示",
-    "adaptive": "自適應",
-    "relative": "相對位置",
-    "grid-setup": "網格佈局",
-    "grid-pos": "網格位置",
-    "layout-grid": "LayoutGrid",
-    "grid-layout": "網格佈局",
+    "relative": "relative",
+    "grid-setup": "grid-setup",
+    "grid-pos": "grid-pos",
+    "layout-grid": "layout-grid",
 }
 
 # 彈出窗口指令集合

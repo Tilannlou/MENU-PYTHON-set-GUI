@@ -1,0 +1,38 @@
+menu clear
+menu window main 800 600 "響應式佈局演示"
+menu style header bg="#2c3e50" color="#ecf0f1" font="Arial,18,bold"
+menu style button bg="#3498db" color="#ffffff" font="Arial,12,bold"
+menu style status bg="#f1c40f" color="#000000" font="Arial,10"
+
+# 標題 - 固定位置
+menu control label title text="🎨 響應式佈局測試" x=50 y=30 w=700 h=40 class=header
+
+# 說明文字
+menu control label desc text="請嘗試調整窗口大小，觀察控件如何自適應" x=50 y=80 w=700 h=30 class=status
+
+# 左上角控件 - 相對位置
+menu control button btn1 text="左上角按鈕" relx=0.1 rely=0.2 relwidth=0.3 relheight=0.1 anchor="nw"
+menu control label label1 text="相對定位控件" relx=0.1 rely=0.35 relwidth=0.3 relheight=0.05 anchor="nw"
+
+# 右下角控件 - 相對位置
+menu control button btn2 text="右下角按鈕" relx=0.8 rely=0.8 relwidth=0.15 relheight=0.08 anchor="se"
+menu control label label2 text="右下角標籤" relx=0.8 rely=0.72 relwidth=0.15 relheight=0.05 anchor="se"
+
+# 中心控件 - 相對位置和尺寸
+menu control button btnCenter text="中心按鈕" relx=0.5 rely=0.5 relwidth=0.2 relheight=0.1 anchor="center"
+menu control label labelCenter text="窗口中心位置" relx=0.5 rely=0.4 relwidth=0.3 relheight=0.05 anchor="center"
+
+# 狀態顯示
+menu control label statusLabel text="當前窗口大小: 800x600" x=50 y=520 w=700 h=30 class=status
+
+# 測試按鈕
+menu control button btnResize text="測試最大化" x=50 y=470 w=120 h=35 class=button
+menu control button btnMinimize text="測試最小化" x=200 y=470 w=120 h=35 class=button
+menu control button btnInfo text="顯示窗口資訊" x=350 y=470 w=150 h=35 class=button
+
+# 事件綁定
+menu binding btnResize click "window-maximize main"
+menu binding btnMinimize click "window-minimize main"
+menu binding btnInfo click "show_window_info"
+
+menu show

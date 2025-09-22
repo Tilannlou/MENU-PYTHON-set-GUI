@@ -1,0 +1,33 @@
+menu clear
+menu window main 800 600 "取得指令演示"
+
+# 創建一些控件用於測試
+menu control label title text="取得指令測試" x=50 y=30 w=400 h=40
+menu control button btnTest text="測試按鈕" x=50 y=100 w=120 h=35
+menu control entry inputBox placeholder="輸入一些文字" x=50 y=150 w=200 h=25
+
+# 創建工作區
+menu workspace workArea relx=0.1 rely=0.3 relwidth=0.8 relheight=0.4 bg="#f0f0f0"
+
+# 在工作區中添加控件
+menu workspace-add workArea label info text="工作區中的標籤" x=20 y=20 w=200 h=30
+menu workspace-add workArea button wsBtn text="工作區按鈕" x=20 y=70 w=100 h=30
+
+# 創建表情符號選擇器
+menu emoji-picker emojiPicker 500 100 300 200
+
+# 創建一些測試按鈕來演示取得指令
+menu control button btnGetWindow text="取得窗口信息" x=300 y=100 w=150 h=35
+menu control button btnGetControls text="取得控件信息" x=300 y=150 w=150 h=35
+menu control button btnGetWorkspace text="取得工作區信息" x=300 y=200 w=150 h=35
+menu control button btnGetEmoji text="取得表情符號狀態" x=300 y=250 w=150 h=35
+menu control button btnGetSystem text="取得系統信息" x=300 y=300 w=150 h=35
+
+# 綁定按鈕事件來執行取得指令
+menu binding btnGetWindow click "get window position size title"
+menu binding btnGetControls click "get control:btnTest text position size font color type"
+menu binding btnGetWorkspace click "get workspace:workArea position size color"
+menu binding btnGetEmoji click "get emoji available status"
+menu binding btnGetSystem click "get system time controls workspaces memory version"
+
+menu show

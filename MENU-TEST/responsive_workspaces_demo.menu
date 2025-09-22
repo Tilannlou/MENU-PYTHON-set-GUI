@@ -1,0 +1,51 @@
+menu clear
+menu window main 1000 700 "自適應工作區演示"
+
+menu style title_label font="Arial,24,bold" color="#2E3440"
+menu style workspace_title font="Arial,14,bold" color="#4C566A"
+menu style workspace_content font="Arial,11" color="#434C5E"
+
+# 主標題 - 自適應位置和字體
+menu control label main_title text="MENU002 自適應工作區" relx=0.5 rely=0.08 anchor="center" class="title_label"
+
+# 四個自適應工作區 - 使用相對定位
+# 左上工作區
+menu workspace workspace1 relx=0.02 rely=0.18 relwidth=0.46 relheight=0.38 bg="#ECEFF4" anchor="nw"
+
+# 右上工作區
+menu workspace workspace2 relx=0.52 rely=0.18 relwidth=0.46 relheight=0.38 bg="#ECEFF4" anchor="nw"
+
+# 左下工作區
+menu workspace workspace3 relx=0.02 rely=0.60 relwidth=0.46 relheight=0.35 bg="#ECEFF4" anchor="nw"
+
+# 右下工作區
+menu workspace workspace4 relx=0.52 rely=0.60 relwidth=0.46 relheight=0.35 bg="#ECEFF4" anchor="nw"
+
+# 在工作區1中添加內容
+menu workspace-add workspace1 label ws1_title text="工作區 1" x=10 y=10 w=200 h=25 class="workspace_title"
+menu workspace-add workspace1 label ws1_content text="這個區域會隨窗口大小自動調整\n• 相對定位 (relx, rely)\n• 相對尺寸 (relwidth, relheight)\n• 自適應字體大小" x=10 y=40 w=200 h=80 class="workspace_content"
+menu workspace-add workspace1 button ws1_btn text="按鈕1" x=10 y=120 w=80 h=30
+
+# 在工作區2中添加內容
+menu workspace-add workspace2 label ws2_title text="工作區 2" x=10 y=10 w=200 h=25 class="workspace_title"
+menu workspace-add workspace2 entry ws2_input text="" placeholder="輸入內容..." x=10 y=40 w=180 h=25
+menu workspace-add workspace2 button ws2_btn text="處理" x=10 y=75 w=80 h=30
+menu workspace-add workspace2 label ws2_status text="狀態：就緒" x=10 y=115 w=180 h=20
+
+# 在工作區3中添加內容
+menu workspace-add workspace3 label ws3_title text="工作區 3" x=10 y=10 w=200 h=25 class="workspace_title"
+menu workspace-add workspace3 label ws3_info text="系統資訊:\n• 自適應佈局已啟用\n• 所有元素隨窗口縮放\n• 純Tkinter實現" x=10 y=40 w=200 h=60 class="workspace_content"
+menu workspace-add workspace3 button ws3_info_btn text="獲取資訊" x=10 y=110 w=100 h=30
+
+# 在工作區4中添加內容
+menu workspace-add workspace4 label ws4_title text="工作區 4" x=10 y=10 w=200 h=25 class="workspace_title"
+menu workspace-add workspace4 button ws4_demo1 text="演示1" x=10 y=40 w=80 h=30
+menu workspace-add workspace4 button ws4_demo2 text="演示2" x=100 y=40 w=80 h=30
+menu workspace-add workspace4 button ws4_demo3 text="演示3" x=10 y=80 w=80 h=30
+menu workspace-add workspace4 button ws4_demo4 text="演示4" x=100 y=80 w=80 h=30
+menu workspace-add workspace4 label ws4_result text="點擊按鈕查看結果" x=10 y=120 w=170 h=40 class="workspace_content"
+
+# 底部狀態欄
+menu control label global_status text="窗口自適應模式：啟用 | 拖拽邊框調整大小觀察效果" relx=0.5 rely=0.95 anchor="center"
+
+menu show

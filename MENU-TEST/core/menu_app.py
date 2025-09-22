@@ -5,6 +5,7 @@
 
 import shlex
 import os
+import subprocess
 from typing import Any, Dict, List, Optional, Tuple
 
 import tkinter as tk
@@ -73,7 +74,7 @@ class MenuApp:
 
                     try:
                         # 解析命令行
-                        toks = parse_command_line(line)[1:]  # 跳过 'menu' 前缀
+                        toks = parse_command_line(line)  # parse_command_line 已經處理了 'menu' 前綴
                         if not toks:
                             continue
 
@@ -296,6 +297,18 @@ class MenuApp:
                     return
 
                 logger.warning(f"绑定函数不存在: {func_name}")
+                return
+
+            # 支持直接指令调用，如 "show_window_info"
+            if action and not "=" in action:
+                # 检查是否是注册的指令处理器
+                handler = registry.get(action.lower())
+                if handler:
+                    handler(self)
+                    logger.debug(f"绑定指令调用: {action}")
+                    return
+
+                logger.warning(f"绑定指令不存在: {action}")
                 return
 
             # 处理「target.attr = expr」格式的赋值

@@ -1,0 +1,7 @@
+menu clear
+menu window main 600 400 "Minimal MENU Demo"
+menu style button bg="#3498db" color="#fff" font="Arial,12,bold"
+menu control label title text="Hello MENU002!" x=200 y=50 w=200 h=30
+menu control button btnOK text="Click Me" x=250 y=150 w=100 h=35 class=button
+menu binding btnOK click "title.text = 'Button Clicked!'"
+menu show

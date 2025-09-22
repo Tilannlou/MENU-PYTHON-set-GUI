@@ -1,0 +1,818 @@
+2025-09-22 21:49:20 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 21:59:08 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:00:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:00:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:00:29 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:00:29 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 22:00:29 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:00:29 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 22:00:29 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:00:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:00:29 - MENU002 - INFO - UI构建完成
+2025-09-22 22:00:29 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:00:29 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:05:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:05:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:05:29 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:05:29 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 22:05:29 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:05:29 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 22:05:29 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:29 - MENU002 - INFO - UI构建完成
+2025-09-22 22:05:29 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:05:29 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:05:52 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:05:52 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:05:52 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:05:52 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:05:52 - MENU002 - INFO - 加载脚本完成: 27 条指令
+2025-09-22 22:05:52 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:05:52 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnapi
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnclear
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnpopup
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnmax
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnmin
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnhide
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 22:05:52 - MENU002 - WARNING - 未找到指令處理器: btnlist
+2025-09-22 22:05:52 - MENU002 - INFO - UI构建完成
+2025-09-22 22:05:52 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:05:52 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:19:24 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:19:24 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:19:24 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:19:24 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 22:19:24 - MENU002 - INFO - 加载脚本完成: 21 条指令
+2025-09-22 22:19:24 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 22:19:24 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: emoji
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: emojipicker
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: btnhappy
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: btnthinking
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: btnsuccess
+2025-09-22 22:19:24 - MENU002 - WARNING - 未找到指令處理器: btnmagic
+2025-09-22 22:19:24 - MENU002 - INFO - UI构建完成
+2025-09-22 22:19:24 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:19:24 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:21:56 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:21:56 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:21:56 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:21:56 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 22:21:56 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:21:56 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 22:21:56 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:21:56 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:21:56 - MENU002 - INFO - UI构建完成
+2025-09-22 22:21:56 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:21:56 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:31:08 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:31:08 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:08 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:31:08 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 22:31:08 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:31:08 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 22:31:08 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:08 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:08 - MENU002 - INFO - UI构建完成
+2025-09-22 22:31:08 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:31:08 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:31:24 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:31:24 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:24 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:31:24 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:31:24 - MENU002 - INFO - 加载脚本完成: 27 条指令
+2025-09-22 22:31:24 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:31:24 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnapi
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnclear
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnpopup
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnmax
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnmin
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnhide
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 22:31:24 - MENU002 - WARNING - 未找到指令處理器: btnlist
+2025-09-22 22:31:24 - MENU002 - INFO - UI构建完成
+2025-09-22 22:31:24 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:31:24 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:31:39 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:31:39 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:31:39 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:31:39 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 22:31:39 - MENU002 - INFO - 加载脚本完成: 21 条指令
+2025-09-22 22:31:39 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 22:31:39 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: emoji
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: emojipicker
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: btnhappy
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: btnthinking
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: btnsuccess
+2025-09-22 22:31:39 - MENU002 - WARNING - 未找到指令處理器: btnmagic
+2025-09-22 22:31:39 - MENU002 - INFO - UI构建完成
+2025-09-22 22:31:39 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:31:39 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:35:51 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:35:51 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:35:51 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:35:51 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 22:35:51 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:35:51 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 22:35:51 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:35:51 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:35:51 - MENU002 - INFO - UI构建完成
+2025-09-22 22:35:51 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:35:51 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:37:12 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:37:12 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:37:12 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:37:12 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:37:12 - MENU002 - INFO - 加载脚本完成: 27 条指令
+2025-09-22 22:37:12 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\examples\advanced_demo.menu
+2025-09-22 22:37:12 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnapi
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnclear
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnpopup
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnmax
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnmin
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnhide
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 22:37:12 - MENU002 - WARNING - 未找到指令處理器: btnlist
+2025-09-22 22:37:12 - MENU002 - INFO - UI构建完成
+2025-09-22 22:37:12 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:37:12 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 22:37:35 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 22:37:35 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 22:37:35 - MENU002 - INFO - 系统初始化完成
+2025-09-22 22:37:35 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 22:37:35 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 22:37:35 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 22:37:35 - MENU002 - INFO - 开始构建UI
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:35 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 22:37:35 - MENU002 - INFO - UI构建完成
+2025-09-22 22:37:35 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 22:37:35 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:27:13 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:27:13 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:27:13 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:27:13 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 23:27:13 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:27:13 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 23:27:13 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:27:13 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:27:13 - MENU002 - INFO - UI构建完成
+2025-09-22 23:27:13 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:27:13 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:28:27 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:28:27 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:28:27 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:28:27 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:28:27 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:28:27 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:28:27 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:28:27 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:28:27 - MENU002 - INFO - UI构建完成
+2025-09-22 23:28:27 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:28:27 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:29:09 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:29:09 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:29:09 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:29:09 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 23:29:09 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:29:09 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 23:29:09 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:09 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:09 - MENU002 - INFO - UI构建完成
+2025-09-22 23:29:09 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:29:09 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:29:39 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:29:39 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:29:39 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:29:39 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:29:39 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:29:39 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:29:39 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:39 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:29:39 - MENU002 - INFO - UI构建完成
+2025-09-22 23:29:39 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:29:39 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:30:06 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:30:06 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:30:06 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:30:06 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:30:06 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:30:06 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:30:06 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:30:06 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:06 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:06 - MENU002 - INFO - UI构建完成
+2025-09-22 23:30:06 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:30:06 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:30:29 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:30:29 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:30:29 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:30:29 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:30:29 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 23:30:29 - MENU002 - INFO - 加载脚本完成: 12 条指令
+2025-09-22 23:30:29 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 23:30:29 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: rows=4
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: demo
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: btnok
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:29 - MENU002 - WARNING - 未找到指令處理器: popupa
+2025-09-22 23:30:29 - MENU002 - INFO - UI构建完成
+2025-09-22 23:30:29 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:30:29 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:31:21 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:31:21 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:31:21 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:31:21 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:31:21 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 23:31:21 - MENU002 - INFO - 加载脚本完成: 21 条指令
+2025-09-22 23:31:21 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 23:31:21 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: main
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: header
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: status
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: emoji
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: emojipicker
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: label
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: button
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: btnshow
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: btnhappy
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: btnthinking
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: btnsuccess
+2025-09-22 23:31:21 - MENU002 - WARNING - 未找到指令處理器: btnmagic
+2025-09-22 23:31:21 - MENU002 - INFO - UI构建完成
+2025-09-22 23:31:21 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:31:21 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:32:49 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:32:49 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:32:49 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:32:49 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:32:49 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:32:49 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-22 23:32:49 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:32:49 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:32:49 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:32:49 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:32:49 - MENU002 - ERROR - 创建控件失败: title - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:32:49 - MENU002 - ERROR - 创建控件失败: btnOK - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: 網格佈局
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: layoutgrid
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: api設定
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: api呼叫
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-22 23:32:49 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-22 23:32:49 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-22 23:32:49 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-22 23:32:49 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-22 23:32:49 - MENU002 - WARNING - 找不到控件进行事件绑定: btnOK
+2025-09-22 23:32:49 - MENU002 - INFO - UI构建完成
+2025-09-22 23:32:49 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:32:49 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:33:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:33:29 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:33:29 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:33:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:33:29 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:33:29 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:33:29 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-22 23:33:29 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:33:29 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:33:29 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:33:29 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:33:29 - MENU002 - ERROR - 创建控件失败: title - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:33:29 - MENU002 - ERROR - 创建控件失败: btnOK - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:33:29 - MENU002 - ERROR - 网格布局设定失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:33:29 - MENU002 - ERROR - 网格布局启用失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:33:29 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-22 23:33:29 - MENU002 - INFO - API设定成功: demo
+2025-09-22 23:33:29 - MENU002 - WARNING - 找不到按钮: btnOK
+2025-09-22 23:33:29 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-22 23:33:29 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-22 23:33:29 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-22 23:33:29 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-22 23:33:29 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-22 23:33:29 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-22 23:33:29 - MENU002 - WARNING - 找不到控件进行事件绑定: btnOK
+2025-09-22 23:33:29 - MENU002 - INFO - UI构建完成
+2025-09-22 23:33:29 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:33:29 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:37:21 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:37:21 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:37:21 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:37:21 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:37:21 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:37:21 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 23:37:21 - MENU002 - INFO - 加载脚本完成: 22 条指令
+2025-09-22 23:37:21 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\examples\emoji_demo.menu
+2025-09-22 23:37:21 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:37:21 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: title - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: subtitle - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: statusLabel - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 創建表情符號選擇器失敗: emojiPicker - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: selectedEmoji - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: emojiDesc - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: btnShow - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: btnHappy - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: btnThinking - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: btnSuccess - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - ERROR - 创建控件失败: btnMagic - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:21 - MENU002 - WARNING - 找不到控件进行事件绑定: btnShow
+2025-09-22 23:37:21 - MENU002 - WARNING - 找不到控件进行事件绑定: btnHappy
+2025-09-22 23:37:21 - MENU002 - WARNING - 找不到控件进行事件绑定: btnThinking
+2025-09-22 23:37:21 - MENU002 - WARNING - 找不到控件进行事件绑定: btnSuccess
+2025-09-22 23:37:21 - MENU002 - WARNING - 找不到控件进行事件绑定: btnMagic
+2025-09-22 23:37:21 - MENU002 - INFO - UI构建完成
+2025-09-22 23:37:21 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:37:21 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:37:24 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:37:24 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:37:24 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:37:24 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:37:24 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:37:24 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-22 23:37:24 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-22 23:37:24 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-22 23:37:24 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:37:24 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:37:24 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:24 - MENU002 - ERROR - 创建控件失败: title - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:24 - MENU002 - ERROR - 创建控件失败: btnOK - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:37:24 - MENU002 - ERROR - 网格布局设定失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:37:24 - MENU002 - ERROR - 网格布局启用失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:37:24 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-22 23:37:24 - MENU002 - INFO - API设定成功: demo
+2025-09-22 23:37:24 - MENU002 - WARNING - 找不到按钮: btnOK
+2025-09-22 23:37:24 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-22 23:37:24 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-22 23:37:24 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-22 23:37:24 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-22 23:37:24 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-22 23:37:24 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-22 23:37:24 - MENU002 - WARNING - 找不到控件进行事件绑定: btnOK
+2025-09-22 23:37:24 - MENU002 - INFO - UI构建完成
+2025-09-22 23:37:24 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:37:24 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:54:26 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:54:26 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:54:26 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:54:26 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:54:26 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:54:26 - MENU002 - INFO - 使用默认脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:54:26 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-22 23:54:26 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-22 23:54:26 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-22 23:54:26 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:54:26 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:54:26 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:54:26 - MENU002 - ERROR - 创建控件失败: title - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:54:26 - MENU002 - ERROR - 创建控件失败: btnOK - Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:54:26 - MENU002 - ERROR - 网格布局设定失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:54:26 - MENU002 - ERROR - 网格布局启用失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-22 23:54:26 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-22 23:54:26 - MENU002 - INFO - API设定成功: demo
+2025-09-22 23:54:26 - MENU002 - WARNING - 找不到按钮: btnOK
+2025-09-22 23:54:26 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-22 23:54:26 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-22 23:54:26 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-22 23:54:26 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-22 23:54:26 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-22 23:54:26 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-22 23:54:26 - MENU002 - WARNING - 找不到控件进行事件绑定: btnOK
+2025-09-22 23:54:26 - MENU002 - INFO - UI构建完成
+2025-09-22 23:54:26 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:54:26 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:54:38 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:54:38 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:54:38 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:54:38 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:54:38 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:54:38 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\minimal_demo.menu
+2025-09-22 23:54:38 - MENU002 - INFO - 加载脚本完成: 2 条指令
+2025-09-22 23:54:38 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\minimal_demo.menu
+2025-09-22 23:54:38 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:54:38 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:54:38 - MENU002 - ERROR - 创建窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:54:38 - MENU002 - INFO - UI构建完成
+2025-09-22 23:54:38 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:54:38 - MENU002 - ERROR - 主窗口未创建，无法运行应用
+2025-09-22 23:56:25 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:56:25 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-22 23:56:25 - MENU002 - WARNING - GUI 环境不可用，将以命令行模式运行
+2025-09-22 23:56:25 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250922.log
+2025-09-22 23:56:25 - MENU002 - INFO - 系统初始化完成
+2025-09-22 23:56:25 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\minimal_demo.menu
+2025-09-22 23:56:25 - MENU002 - INFO - 加载脚本完成: 2 条指令
+2025-09-22 23:56:25 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\minimal_demo.menu
+2025-09-22 23:56:25 - MENU002 - INFO - 开始构建UI
+2025-09-22 23:56:25 - MENU002 - INFO - 清除所有控件和样式
+2025-09-22 23:56:25 - MENU002 - ERROR - 创建Tkinter窗口失败: Can't find a usable init.tcl in the following directories: 
+    C:/Users/tilannlou/AppData/Local/Programs/Python/Python313/lib/tcl8.6 C:/lib/tcl8.6 C:/lib/tcl8.6 C:/library C:/library C:/tcl8.6.15/library C:/tcl8.6.15/library
+
+
+
+This probably means that Tcl wasn't installed properly.
+
+2025-09-22 23:56:25 - MENU002 - WARNING - GUI环境不可用，跳过窗口创建
+2025-09-22 23:56:25 - MENU002 - INFO - UI构建完成
+2025-09-22 23:56:25 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-22 23:56:25 - MENU002 - ERROR - 主窗口未创建，无法运行应用

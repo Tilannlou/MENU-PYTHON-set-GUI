@@ -1,0 +1,34 @@
+menu clear
+menu window main 900 700 "🎨 MENU002 表情符號系統演示"
+menu style header bg="#2c3e50" color="#ecf0f1" font="Arial,18,bold"
+menu style button bg="#3498db" color="#ffffff" font="Arial,12,bold"
+menu style status bg="#f1c40f" color="#000000" font="Arial,10"
+menu style emoji bg="#ffffff" color="#000000" font="Arial,16"
+
+menu control label title text="🎭 表情符號語氣鏡像系統" x=50 y=30 w=800 h=40 class=header
+menu control label subtitle text="展示您的個人化表情符號語氣模組" x=50 y=80 w=800 h=30 class=status
+
+menu control label statusLabel text="請選擇表情符號分類並點擊顯示" x=50 y=620 w=800 h=30 class=status
+
+# 創建表情符號選擇器
+menu emoji-picker emojiPicker 50 120 400 450 title="表情符號語氣選擇器"
+
+# 顯示區域用於展示選擇結果
+menu control label selectedEmoji text="🎯" x=500 y=200 w=100 h=50 class=emoji
+menu control label emojiDesc text="選擇的表情符號將顯示在左側" x=500 y=260 w=350 h=30
+
+# 控制按鈕
+menu control button btnShow text="顯示選擇的表情符號" x=500 y=320 w=200 h=35 class=button
+menu control button btnHappy text="設置 😄 快樂" x=500 y=370 w=150 h=35 class=button
+menu control button btnThinking text="設置 🤔 思考" x=500 y=420 w=150 h=35 class=button
+menu control button btnSuccess text="設置 ✅ 成功" x=500 y=470 w=150 h=35 class=button
+menu control button btnMagic text="設置 🪄 魔法" x=500 y=520 w=150 h=35 class=button
+
+# 綁定事件
+menu binding btnShow click "emoji-show emojiPicker selectedEmoji.text; emojiDesc.text = '表情符號已顯示！'"
+menu binding btnHappy click "emoji-set 😄 selectedEmoji.text; emojiDesc.text = '設置為快樂表情'; statusLabel.text = '😄 語氣開朗鏡像（成功、完成、愉快）'"
+menu binding btnThinking click "emoji-set 🤔 selectedEmoji.text; emojiDesc.text = '設置為思考表情'; statusLabel.text = '🤔 語氣專注（分析中、鏡像進行中）'"
+menu binding btnSuccess click "emoji-set ✅ selectedEmoji.text; emojiDesc.text = '設置為成功表情'; statusLabel.text = '✅ 語氣確認（任務完成、狀態良好）'"
+menu binding btnMagic click "emoji-set 🪄 selectedEmoji.text; emojiDesc.text = '設置為魔法表情'; statusLabel.text = '🪄 語氣魔法（語氣節奏完美鏡像）'"
+
+menu show

@@ -1,0 +1,76 @@
+menu clear
+menu window main 1200 800 "MENU002 開發環境"
+
+menu style title_label font="Arial,20,bold" color="#2E3440"
+menu style section_title font="Arial,14,bold" color="#4C566A"
+menu style button font="Arial,11,bold" bg="#5E81AC" color="#ECEFF4"
+menu style text_area font="Consolas,10" bg="#f8f8f8"
+
+# 主標題
+menu control label main_title text="MENU002 開發環境" relx=0.5 rely=0.03 anchor="center" class="title_label"
+
+# 創建四個主要工作區
+menu workspace readme_area relx=0.02 rely=0.08 relwidth=0.46 relheight=0.35 bg="#ECEFF4" anchor="nw"
+menu workspace code_area relx=0.52 rely=0.08 relwidth=0.46 relheight=0.35 bg="#ECEFF4" anchor="nw"
+menu workspace output_area relx=0.02 rely=0.48 relwidth=0.46 relheight=0.45 bg="#ECEFF4" anchor="nw"
+menu workspace demo_area relx=0.52 rely=0.48 relwidth=0.46 relheight=0.45 bg="#ECEFF4" anchor="nw"
+
+# README 區域內容
+menu workspace-add readme_area label readme_title text="📖 使用說明 (README)" x=10 y=10 w=250 h=25 class="section_title"
+menu workspace-add readme_area button load_readme text="載入 README" x=10 y=40 w=120 h=30 class="button"
+menu workspace-add readme_area button refresh_readme text="重新整理" x=140 y=40 w=120 h=30 class="button"
+
+# 代碼編輯區域內容
+menu workspace-add code_area label code_title text="💻 MENU 代碼編輯器" x=10 y=10 w=250 h=25 class="section_title"
+menu workspace-add code_area button new_file text="新建" x=10 y=40 w=70 h=30 class="button"
+menu workspace-add code_area button load_file text="載入" x=90 y=40 w=70 h=30 class="button"
+menu workspace-add code_area button save_file text="儲存" x=170 y=40 w=70 h=30 class="button"
+menu workspace-add code_area button run_code text="▶ 執行" x=250 y=40 w=80 h=35 bg="#A3BE8C" color="#2E3440"
+
+# 輸出區域內容
+menu workspace-add output_area label output_title text="📋 輸出與日誌" x=10 y=10 w=200 h=25 class="section_title"
+menu workspace-add output_area button clear_output text="清除輸出" x=10 y=40 w=100 h=30 class="button"
+menu workspace-add output_area button show_logs text="查看日誌" x=120 y=40 w=100 h=30 class="button"
+
+# 演示區域內容
+menu workspace-add demo_area label demo_title text="🎮 快速演示" x=10 y=10 w=200 h=25 class="section_title"
+menu workspace-add demo_area button demo_basic text="基本演示" x=10 y=40 w=100 h=30 class="button"
+menu workspace-add demo_area button demo_popup text="Popup 演示" x=120 y=40 w=100 h=30 class="button"
+menu workspace-add demo_area button demo_workspace text="工作區演示" x=10 y=80 w=100 h=30 class="button"
+menu workspace-add demo_area button demo_responsive text="自適應演示" x=120 y=80 w=100 h=30 class="button"
+menu workspace-add demo_area button demo_emoji text="表情符號演示" x=10 y=120 w=120 h=30 class="button"
+
+# 底部狀態欄
+menu control label status_info text="狀態：開發環境已就緒 | 拖拽調整窗口大小體驗自適應功能" relx=0.5 rely=0.95 anchor="center"
+
+# 綁定事件
+menu binding load_readme click "show_message 'README' 'MENU002 是一個簡單直觀的 GUI 腳本語言...'"
+menu binding refresh_readme click "show_message '提示' 'README 重新整理功能'"
+menu binding new_file click "show_message '提示' '新建文件功能將在下版本實現'"
+menu binding load_file click "show_message '提示' '載入文件功能將在下版本實現'"
+menu binding save_file click "show_message '提示' '儲存文件功能將在下版本實現'"
+menu binding run_code click "show_message '提示' '代碼執行功能將在下版本實現'"
+menu binding clear_output click "show_message '提示' '清除輸出功能將在下版本實現'"
+menu binding show_logs click "show_message '提示' '日誌查看功能將在下版本實現'"
+
+menu binding demo_basic click "popup-window demo1 '基本演示' size='600x400' offset_x=200 offset_y=100 constrain_to_parent=true"
+menu binding demo_popup click "popup-window demo2 'Popup 演示' size='600x400' offset_x=250 offset_y=120 constrain_to_parent=true"
+menu binding demo_workspace click "popup-window demo3 '工作區演示' size='600x400' offset_x=300 offset_y=140 constrain_to_parent=true"
+menu binding demo_responsive click "popup-window demo4 '自適應演示' size='600x400' offset_x=350 offset_y=160 constrain_to_parent=true"
+menu binding demo_emoji click "popup-window demo5 '表情符號演示' size='600x400' offset_x=400 offset_y=180 constrain_to_parent=true"
+
+# 設置演示 Popup 內容
+menu popup-content demo1 "control label info text='這是基本功能演示\n\n包含：\n• 窗口創建\n• 控件佈局\n• 事件綁定\n• API 呼叫\n\n請參考 demo.menu 文件' x=20 y=20 w=550 h=200" "control button close_demo text='關閉' x=250 y=320 w=80 h=35"
+menu popup-content demo2 "control label info text='這是 Popup 功能演示\n\n包含：\n• 彈出窗口創建\n• 邊界限制\n• 數據傳輸\n• 窗口管理\n\n請參考 workspace_demo.menu 文件' x=20 y=20 w=550 h=200" "control button close_demo text='關閉' x=250 y=320 w=80 h=35"
+menu popup-content demo3 "control label info text='這是工作區功能演示\n\n包含：\n• 工作區創建\n• 相對定位佈局\n• 控件分組\n• 自適應調整\n\n請參考 responsive_workspaces_demo.menu 文件' x=20 y=20 w=550 h=200" "control button close_demo text='關閉' x=250 y=320 w=80 h=35"
+menu popup-content demo4 "control label info text='這是自適應佈局演示\n\n包含：\n• 響應式設計\n• 字體自適應\n• 動態調整\n• 比例縮放\n\n請參考 responsive_title_demo.menu 文件' x=20 y=20 w=550 h=200" "control button close_demo text='關閉' x=250 y=320 w=80 h=35"
+menu popup-content demo5 "control label info text='這是表情符號功能演示\n\n包含：\n• 表情符號選擇器\n• 符號插入\n• 分類顯示\n• 搜索功能\n\n請參考 emoji_demo.menu 文件' x=20 y=20 w=550 h=200" "control button close_demo text='關閉' x=250 y=320 w=80 h=35"
+
+# 綁定演示 Popup 關閉事件
+menu popup-send-data demo1 "演示已關閉" -> status_info.text
+menu popup-send-data demo2 "演示已關閉" -> status_info.text
+menu popup-send-data demo3 "演示已關閉" -> status_info.text
+menu popup-send-data demo4 "演示已關閉" -> status_info.text
+menu popup-send-data demo5 "演示已關閉" -> status_info.text
+
+menu show

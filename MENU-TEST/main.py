@@ -134,6 +134,11 @@ def load_config(config_path: Optional[str] = None) -> Dict[str, Any]:
 def initialize_system(config: Dict[str, Any]) -> bool:
     """初始化系统"""
     try:
+        # 检查 GUI 环境可用性
+        gui_available = _check_gui_availability()
+        if not gui_available:
+            logger.warning("GUI 环境不可用，将以命令行模式运行")
+
         # 设置日志级别
         log_level = config.get('log_level', 'INFO')
         configure_logging(log_level)
@@ -151,6 +156,20 @@ def initialize_system(config: Dict[str, Any]) -> bool:
 
     except Exception as e:
         logger.error(f"系统初始化失败: {e}")
+        return False
+
+
+def _check_gui_availability() -> bool:
+    """检查 GUI 环境是否可用"""
+    try:
+        import tkinter as tk
+        # 尝试创建一个隐藏的根窗口来测试
+        root = tk.Tk()
+        root.withdraw()  # 隐藏窗口
+        root.destroy()   # 销毁窗口
+        return True
+    except Exception as e:
+        logger.debug(f"GUI 环境检查失败: {e}")
         return False
 
 
@@ -187,20 +206,63 @@ def _register_debug_commands():
         def cmd_debug_memory(app, *args):
             """显示内存使用信息"""
             try:
-                import psutil
-                process = psutil.Process(os.getpid())
-                memory_info = process.memory_info()
+                import subprocess
 
-                info = f"""
+                # 使用 tasklist 命令获取内存信息 (Windows 标准命令)
+                result = subprocess.run(
+                    ['tasklist', '/FI', f'PID eq {os.getpid()}', '/FO', 'LIST'],
+                    capture_output=True, text=True, timeout=10, encoding='utf-8'
+                )
+
+                if result.returncode == 0 and result.stdout.strip():
+                    # 解析 tasklist LIST 格式输出
+                    lines = [line.strip() for line in result.stdout.split('\n') if line.strip()]
+
+                    memory_line = None
+                    for line in lines:
+                        if 'RAM' in line or '記憶體' in line:  # 支持中英文
+                            memory_line = line
+                            break
+
+                    if memory_line:
+                        # 提取内存数值，例如："RAM使用量:    15,748 K"
+                        try:
+                            # 找到数值部分
+                            parts = memory_line.split(':')
+                            if len(parts) >= 2:
+                                memory_str = parts[1].strip()
+                                # 移除逗号和单位，转换为数值
+                                memory_str = memory_str.replace(',', '').replace('K', '').replace('KB', '').strip()
+                                memory_kb = int(memory_str)
+
+                                # 转换为 MB
+                                memory_mb = memory_kb / 1024
+
+                                info = f"""
 内存使用信息:
-- RSS (物理内存): {memory_info.rss / 1024 / 1024:.1f} MB
-- VMS (虚拟内存): {memory_info.vms / 1024 / 1024:.1f} MB
-                """.strip()
+- 工作集 (Working Set): {memory_mb:.1f} MB
+                                """.strip()
 
-                app.show_message("内存信息", info)
+                                app.show_message("内存信息", info)
+                                return
+                        except (ValueError, IndexError) as e:
+                            logger.debug(f"解析内存数值失败: {e}")
 
-            except ImportError:
-                app.show_message("内存信息", "psutil 模块未安装，无法获取详细内存信息")
+                    # 如果解析失败，提供基本信息
+                    app.show_message("内存信息", "使用 tasklist 获取内存信息成功，但解析数值失败")
+                else:
+                    # tasklist 失败，回退到基本信息
+                    app.show_message("内存信息", "tasklist 命令执行失败，无法获取详细内存信息")
+
+            except subprocess.TimeoutExpired:
+                logger.error("tasklist 命令执行超时")
+                app.show_message("内存信息", "获取内存信息超时")
+            except FileNotFoundError:
+                logger.error("tasklist 命令不可用")
+                app.show_message("内存信息", "系统不支持 tasklist 命令")
+            except Exception as e:
+                logger.error(f"获取内存信息失败: {e}")
+                app.show_message("内存信息", f"获取内存信息失败: {e}")
 
         logger.debug("调试指令注册完成")
 
@@ -209,7 +271,7 @@ def _register_debug_commands():
 
 
 def _initialize_plugin_system():
-    """初始化插件系统"""
+    """初始化插件系统（預留功能）"""
     try:
         # 检查插件配置文件是否存在
         plugin_config = current_dir / CONFIG_FILES['PLUGIN_CONFIG']
@@ -217,21 +279,15 @@ def _initialize_plugin_system():
             logger.debug("插件配置文件不存在，跳过插件系统初始化")
             return
 
-        # 尝试加载插件系统
-        from core.plugin_system import PluginManager, PluginCommandBus
+        # 插件系統目前尚未實現，僅記錄日誌
+        logger.info("插件系統預留功能 - 配置文件存在但系統尚未實現")
+        logger.debug(f"插件配置檔案位置: {plugin_config}")
 
-        logger.info("初始化插件系统...")
-        plugin_manager = PluginManager(str(plugin_config))
-        command_bus = PluginCommandBus(registry)
-        plugin_manager.command_bus = command_bus
+        # 未來可以實現：
+        # from core.plugin_system import PluginManager, PluginCommandBus
+        # plugin_manager = PluginManager(str(plugin_config))
+        # ...
 
-        # 初始化所有插件
-        plugin_manager.initialize_plugins()
-        plugin_info = plugin_manager.get_plugin_info()
-        logger.info(f"插件系统初始化完成: {plugin_info}")
-
-    except ImportError as e:
-        logger.debug(f"插件系统模块不存在: {e}")
     except Exception as e:
         logger.error(f"插件系统初始化失败: {e}")
 

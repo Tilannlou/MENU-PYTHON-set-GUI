@@ -167,26 +167,25 @@ def validate_http_method(method: str) -> bool:
     return method.upper() in HTTP_METHODS
 
 
+
 def ensure_url_scheme(url: str, default_scheme: str = 'https') -> str:
-    """
-    确保URL包含协议方案
-
-    Args:
-        url: URL字符串
-        default_scheme: 默认协议方案
-
-    Returns:
-        包含协议的URL
-    """
+    """確保URL包含協議方案，支持更多協議"""
     if not url:
-        return f"{default_scheme}://"
-
+        return f"{default_scheme}://localhost"
+    
+    # 檢查是否已經是完整URL
     parsed = urlparse(url)
-    if not parsed.scheme:
-        return f"{default_scheme}://{url}"
-
-    return url
-
+    if parsed.scheme:
+        return url
+    
+    # 支持本地AI模型常見的連接方式
+    if url.startswith('localhost') or url.startswith('127.0.0.1'):
+        return f"http://{url}"
+    elif ':' in url and not url.startswith(('http://', 'https://')):
+        # 可能是 host:port 格式
+        return f"http://{url}"
+    
+    return f"{default_scheme}://{url}"
 
 def join_url_path(base_url: str, path: str) -> str:
     """

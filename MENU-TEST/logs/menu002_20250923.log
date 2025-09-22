@@ -1,0 +1,426 @@
+2025-09-23 00:03:50 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:03:50 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:03:50 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:03:50 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:03:50 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-23 00:03:50 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:03:50 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-23 00:03:50 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:03:50 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:03:50 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:03:50 - MENU002 - ERROR - 网格布局设定失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-23 00:03:50 - MENU002 - ERROR - 网格布局启用失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-23 00:03:50 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:03:50 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:03:50 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-23 00:03:50 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-23 00:03:50 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-23 00:03:50 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-23 00:03:50 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-23 00:03:50 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-23 00:03:50 - MENU002 - INFO - UI构建完成
+2025-09-23 00:03:50 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:03:50 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:04:52 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:04:52 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:04:52 - MENU002 - INFO - 日誌文件已創建: E:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:04:52 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:04:52 - MENU002 - INFO - 加载MENU脚本: E:\MENU-TEST\demo.menu
+2025-09-23 00:04:52 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:04:52 - MENU002 - INFO - 初始化MENU002应用: E:\MENU-TEST\demo.menu
+2025-09-23 00:04:52 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:04:52 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:04:52 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:04:52 - MENU002 - ERROR - 网格布局设定失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-23 00:04:52 - MENU002 - ERROR - 网格布局启用失败: invalid literal for int() with base 10: 'rows=4'
+2025-09-23 00:04:52 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:04:52 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:04:52 - MENU002 - WARNING - 未找到指令處理器: popup-window
+2025-09-23 00:04:52 - MENU002 - ERROR - 执行popup-window指令时出错: 'NoneType' object is not callable
+2025-09-23 00:04:52 - MENU002 - WARNING - 未找到指令處理器: popup-content
+2025-09-23 00:04:52 - MENU002 - ERROR - 执行popup-content指令时出错: 'NoneType' object is not callable
+2025-09-23 00:04:52 - MENU002 - WARNING - 未找到指令處理器: popup-send-data
+2025-09-23 00:04:52 - MENU002 - ERROR - 执行popup-send-data指令时出错: 'NoneType' object is not callable
+2025-09-23 00:04:52 - MENU002 - INFO - UI构建完成
+2025-09-23 00:04:52 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:04:52 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:06:23 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:06:23 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:06:23 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:06:23 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:06:23 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-23 00:06:23 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:06:23 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-23 00:06:23 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:06:23 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:06:23 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:06:23 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:06:23 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:06:24 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:06:24 - MENU002 - INFO - UI构建完成
+2025-09-23 00:06:24 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:06:24 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:06:51 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:06:51 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:06:51 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:06:51 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:06:51 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\minimal_demo.menu
+2025-09-23 00:06:51 - MENU002 - INFO - 加载脚本完成: 6 条指令
+2025-09-23 00:06:51 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\minimal_demo.menu
+2025-09-23 00:06:51 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:06:51 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:06:51 - MENU002 - INFO - 创建主窗口: main (600x400) - Minimal MENU Demo
+2025-09-23 00:06:51 - MENU002 - INFO - UI构建完成
+2025-09-23 00:06:51 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:06:51 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:13:06 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:13:06 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:13:06 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:13:06 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:13:06 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:13:06 - MENU002 - INFO - 加载脚本完成: 20 条指令
+2025-09-23 00:13:06 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:13:06 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:13:06 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:13:06 - MENU002 - INFO - 创建主窗口: main (800x600) - 響應式佈局演示
+2025-09-23 00:13:06 - MENU002 - INFO - UI构建完成
+2025-09-23 00:13:06 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:13:06 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:13:20 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:21 - MENU002 - WARNING - 不支持的绑定格式: window-maximize main
+2025-09-23 00:13:23 - MENU002 - WARNING - 不支持的绑定格式: show_window_info
+2025-09-23 00:13:24 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:25 - MENU002 - WARNING - 不支持的绑定格式: window-maximize main
+2025-09-23 00:13:25 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:26 - MENU002 - WARNING - 不支持的绑定格式: show_window_info
+2025-09-23 00:13:37 - MENU002 - WARNING - 不支持的绑定格式: show_window_info
+2025-09-23 00:13:38 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:55 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:56 - MENU002 - WARNING - 不支持的绑定格式: window-minimize main
+2025-09-23 00:13:57 - MENU002 - WARNING - 不支持的绑定格式: window-maximize main
+2025-09-23 00:13:57 - MENU002 - WARNING - 不支持的绑定格式: window-maximize main
+2025-09-23 00:15:09 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:15:09 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:15:09 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:15:09 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:15:09 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:15:09 - MENU002 - INFO - 加载脚本完成: 20 条指令
+2025-09-23 00:15:09 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:15:09 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:15:09 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:15:09 - MENU002 - INFO - 创建主窗口: main (800x600) - 響應式佈局演示
+2025-09-23 00:15:10 - MENU002 - INFO - UI构建完成
+2025-09-23 00:15:10 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:15:10 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:15:16 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:16 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:15:17 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:17 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:15:17 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:17 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:15:18 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:18 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:15:20 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:20 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:15:21 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:15:21 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:15:22 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:15:22 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:15:25 - MENU002 - INFO - 窗口資訊: 位置(156,156), 尺寸(800x600)
+2025-09-23 00:15:39 - MENU002 - INFO - 窗口資訊: 位置(156,156), 尺寸(1400x600)
+2025-09-23 00:15:40 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:15:40 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:15:41 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:15:41 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:32 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:16:32 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:16:32 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:16:32 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:16:32 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\test_buttons.menu
+2025-09-23 00:16:32 - MENU002 - INFO - 加载脚本完成: 17 条指令
+2025-09-23 00:16:32 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\test_buttons.menu
+2025-09-23 00:16:32 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:16:32 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:16:32 - MENU002 - INFO - 创建主窗口: main (600x400) - 按鈕測試
+2025-09-23 00:16:32 - MENU002 - INFO - API設定已更新: test -> https://api.example.com
+2025-09-23 00:16:32 - MENU002 - INFO - API设定成功: test
+2025-09-23 00:16:32 - MENU002 - INFO - UI构建完成
+2025-09-23 00:16:32 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:16:32 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:16:36 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:36 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:37 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:37 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:38 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:38 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:45 - MENU002 - WARNING - 未找到指令處理器: api-call btn3 test get '/test' -> result.text
+2025-09-23 00:16:45 - MENU002 - WARNING - 绑定指令不存在: api-call btn3 test GET '/test' -> result.text
+2025-09-23 00:16:49 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:16:49 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:16:50 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:50 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:54 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:54 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:57 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:57 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:58 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:58 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:16:58 - MENU002 - WARNING - 未找到指令處理器: window-maximize main
+2025-09-23 00:16:58 - MENU002 - WARNING - 绑定指令不存在: window-maximize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 未找到指令處理器: window-minimize main
+2025-09-23 00:17:00 - MENU002 - WARNING - 绑定指令不存在: window-minimize main
+2025-09-23 00:18:16 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:18:16 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:18:16 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:18:16 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:18:16 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:18:16 - MENU002 - INFO - 加载脚本完成: 20 条指令
+2025-09-23 00:18:16 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_demo.menu
+2025-09-23 00:18:16 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:18:16 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:18:16 - MENU002 - INFO - 创建主窗口: main (800x600) - 響應式佈局演示
+2025-09-23 00:18:16 - MENU002 - INFO - UI构建完成
+2025-09-23 00:18:16 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:18:16 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:21:18 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:21:18 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:21:18 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:21:18 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:21:18 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-23 00:21:18 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:21:18 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-23 00:21:18 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:21:18 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:21:18 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:21:18 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:21:18 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:21:18 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:21:18 - MENU002 - INFO - UI构建完成
+2025-09-23 00:21:18 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:21:18 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:23:31 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:23:31 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:23:31 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:23:31 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:23:31 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-23 00:23:31 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:23:31 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-23 00:23:31 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:23:31 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:23:31 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:23:31 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:23:31 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:23:31 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:23:31 - MENU002 - INFO - UI构建完成
+2025-09-23 00:23:31 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:23:31 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:24:29 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:24:30 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:24:30 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:24:30 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:24:30 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-23 00:24:30 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 00:24:30 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-23 00:24:30 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:24:30 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:24:30 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 00:24:30 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 00:24:30 - MENU002 - INFO - API设定成功: demo
+2025-09-23 00:24:30 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:24:30 - MENU002 - INFO - UI构建完成
+2025-09-23 00:24:30 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:24:30 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:31:55 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:31:55 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:31:55 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:31:55 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:31:55 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\workspace_demo.menu
+2025-09-23 00:31:55 - MENU002 - INFO - 加载脚本完成: 20 条指令
+2025-09-23 00:31:55 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\workspace_demo.menu
+2025-09-23 00:31:55 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:31:55 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:31:55 - MENU002 - INFO - 创建主窗口: main (800x600) - 工作區與受限Popup演示
+2025-09-23 00:31:55 - MENU002 - WARNING - 弹出窗口不存在: test_popup
+2025-09-23 00:31:55 - MENU002 - WARNING - 弹出窗口不存在: free_popup
+2025-09-23 00:31:55 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:31:55 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 00:31:55 - MENU002 - INFO - UI构建完成
+2025-09-23 00:31:55 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:31:55 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:32:00 - MENU002 - ERROR - 表达式评估失败: '300x200' offset_x=100 offset_y=100 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 00:32:00 - MENU002 - WARNING - 绑定目标控件不存在: popup-window test_popup '受限Popup窗口' size
+2025-09-23 00:32:02 - MENU002 - ERROR - 表达式评估失败: '300x200' offset_x=600 offset_y=200 constrain_to_parent=false - invalid syntax (<string>, line 1)
+2025-09-23 00:32:02 - MENU002 - WARNING - 绑定目标控件不存在: popup-window free_popup '自由Popup窗口' size
+2025-09-23 00:32:10 - MENU002 - ERROR - 表达式评估失败: '300x200' offset_x=100 offset_y=100 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 00:32:10 - MENU002 - WARNING - 绑定目标控件不存在: popup-window test_popup '受限Popup窗口' size
+2025-09-23 00:32:10 - MENU002 - ERROR - 表达式评估失败: '300x200' offset_x=600 offset_y=200 constrain_to_parent=false - invalid syntax (<string>, line 1)
+2025-09-23 00:32:10 - MENU002 - WARNING - 绑定目标控件不存在: popup-window free_popup '自由Popup窗口' size
+2025-09-23 00:41:28 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:41:28 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:41:28 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:41:28 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:41:28 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_title_demo.menu
+2025-09-23 00:41:28 - MENU002 - INFO - 加载脚本完成: 7 条指令
+2025-09-23 00:41:28 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_title_demo.menu
+2025-09-23 00:41:28 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:41:28 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:41:28 - MENU002 - INFO - 创建主窗口: main (800x600) - 自適應標題演示
+2025-09-23 00:41:28 - MENU002 - INFO - UI构建完成
+2025-09-23 00:41:28 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:41:28 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:42:04 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:42:04 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:42:04 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:42:04 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:42:04 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_workspaces_demo.menu
+2025-09-23 00:42:04 - MENU002 - INFO - 加载脚本完成: 27 条指令
+2025-09-23 00:42:04 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_workspaces_demo.menu
+2025-09-23 00:42:04 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:42:04 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:42:04 - MENU002 - INFO - 创建主窗口: main (1000x700) - 自適應工作區演示
+2025-09-23 00:42:04 - MENU002 - ERROR - 創建工作區失敗: workspace1 - invalid literal for int() with base 10: 'relx=0.02'
+2025-09-23 00:42:04 - MENU002 - ERROR - 創建工作區失敗: workspace2 - invalid literal for int() with base 10: 'relx=0.52'
+2025-09-23 00:42:04 - MENU002 - ERROR - 創建工作區失敗: workspace3 - invalid literal for int() with base 10: 'relx=0.02'
+2025-09-23 00:42:04 - MENU002 - ERROR - 創建工作區失敗: workspace4 - invalid literal for int() with base 10: 'relx=0.52'
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace1
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace1
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace1
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace2
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace2
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace2
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace2
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace3
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace3
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace3
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - WARNING - 工作區不存在: workspace4
+2025-09-23 00:42:04 - MENU002 - INFO - UI构建完成
+2025-09-23 00:42:04 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:42:04 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:43:56 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:43:56 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:43:56 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:43:56 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:43:56 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_workspaces_demo.menu
+2025-09-23 00:43:56 - MENU002 - INFO - 加载脚本完成: 27 条指令
+2025-09-23 00:43:56 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_workspaces_demo.menu
+2025-09-23 00:43:56 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:43:56 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:43:56 - MENU002 - INFO - 创建主窗口: main (1000x700) - 自適應工作區演示
+2025-09-23 00:43:57 - MENU002 - INFO - UI构建完成
+2025-09-23 00:43:57 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:43:57 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 00:47:25 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:47:25 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 00:47:25 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 00:47:25 - MENU002 - INFO - 系统初始化完成
+2025-09-23 00:47:25 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\responsive_title_demo.menu
+2025-09-23 00:47:25 - MENU002 - INFO - 加载脚本完成: 7 条指令
+2025-09-23 00:47:25 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\responsive_title_demo.menu
+2025-09-23 00:47:25 - MENU002 - INFO - 开始构建UI
+2025-09-23 00:47:25 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 00:47:25 - MENU002 - INFO - 创建主窗口: main (800x600) - 自適應標題演示
+2025-09-23 00:47:25 - MENU002 - INFO - UI构建完成
+2025-09-23 00:47:25 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 00:47:25 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 01:02:20 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 01:02:20 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 01:02:20 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 01:02:20 - MENU002 - INFO - 系统初始化完成
+2025-09-23 01:02:20 - MENU002 - INFO - 启动默认开发环境界面
+2025-09-23 01:02:20 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\default_gui.menu
+2025-09-23 01:02:20 - MENU002 - INFO - 加载脚本完成: 52 条指令
+2025-09-23 01:02:20 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\default_gui.menu
+2025-09-23 01:02:20 - MENU002 - INFO - 开始构建UI
+2025-09-23 01:02:20 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 01:02:20 - MENU002 - INFO - 创建主窗口: main (1200x800) - MENU002 開發環境
+2025-09-23 01:02:21 - MENU002 - WARNING - 弹出窗口不存在: demo1
+2025-09-23 01:02:21 - MENU002 - WARNING - 弹出窗口不存在: demo2
+2025-09-23 01:02:21 - MENU002 - WARNING - 弹出窗口不存在: demo3
+2025-09-23 01:02:21 - MENU002 - WARNING - 弹出窗口不存在: demo4
+2025-09-23 01:02:21 - MENU002 - WARNING - 弹出窗口不存在: demo5
+2025-09-23 01:02:21 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 01:02:21 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 01:02:21 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 01:02:21 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 01:02:21 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 01:02:21 - MENU002 - INFO - UI构建完成
+2025-09-23 01:02:21 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 01:02:21 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 01:02:25 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' '新建文件功能將在下版本實現'
+2025-09-23 01:02:25 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' '新建文件功能將在下版本實現'
+2025-09-23 01:02:31 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' '新建文件功能將在下版本實現'
+2025-09-23 01:02:31 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' '新建文件功能將在下版本實現'
+2025-09-23 01:02:34 - MENU002 - ERROR - 表达式评估失败: '600x400' offset_x=200 offset_y=100 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 01:02:34 - MENU002 - WARNING - 绑定目标控件不存在: popup-window demo1 '基本演示' size
+2025-09-23 01:02:35 - MENU002 - ERROR - 表达式评估失败: '600x400' offset_x=250 offset_y=120 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 01:02:35 - MENU002 - WARNING - 绑定目标控件不存在: popup-window demo2 'Popup 演示' size
+2025-09-23 01:02:36 - MENU002 - ERROR - 表达式评估失败: '600x400' offset_x=350 offset_y=160 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 01:02:36 - MENU002 - WARNING - 绑定目标控件不存在: popup-window demo4 '自適應演示' size
+2025-09-23 01:02:36 - MENU002 - ERROR - 表达式评估失败: '600x400' offset_x=300 offset_y=140 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 01:02:36 - MENU002 - WARNING - 绑定目标控件不存在: popup-window demo3 '工作區演示' size
+2025-09-23 01:02:37 - MENU002 - ERROR - 表达式评估失败: '600x400' offset_x=400 offset_y=180 constrain_to_parent=true - invalid syntax (<string>, line 1)
+2025-09-23 01:02:37 - MENU002 - WARNING - 绑定目标控件不存在: popup-window demo5 '表情符號演示' size
+2025-09-23 01:02:38 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' '日誌查看功能將在下版本實現'
+2025-09-23 01:02:38 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' '日誌查看功能將在下版本實現'
+2025-09-23 01:02:39 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' '清除輸出功能將在下版本實現'
+2025-09-23 01:02:39 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' '清除輸出功能將在下版本實現'
+2025-09-23 01:02:40 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' '日誌查看功能將在下版本實現'
+2025-09-23 01:02:40 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' '日誌查看功能將在下版本實現'
+2025-09-23 01:02:41 - MENU002 - WARNING - 未找到指令處理器: show_message 'readme' 'menu002 是一個簡單直觀的 gui 腳本語言...'
+2025-09-23 01:02:41 - MENU002 - WARNING - 绑定指令不存在: show_message 'README' 'MENU002 是一個簡單直觀的 GUI 腳本語言...'
+2025-09-23 01:02:42 - MENU002 - WARNING - 未找到指令處理器: show_message 'readme' 'menu002 是一個簡單直觀的 gui 腳本語言...'
+2025-09-23 01:02:42 - MENU002 - WARNING - 绑定指令不存在: show_message 'README' 'MENU002 是一個簡單直觀的 GUI 腳本語言...'
+2025-09-23 01:02:45 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' 'readme 重新整理功能'
+2025-09-23 01:02:45 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' 'README 重新整理功能'
+2025-09-23 01:02:45 - MENU002 - WARNING - 未找到指令處理器: show_message '提示' 'readme 重新整理功能'
+2025-09-23 01:02:45 - MENU002 - WARNING - 绑定指令不存在: show_message '提示' 'README 重新整理功能'
+2025-09-23 01:46:17 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 01:46:17 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 01:46:17 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 01:46:17 - MENU002 - INFO - 系统初始化完成
+2025-09-23 01:46:17 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\get_demo.menu
+2025-09-23 01:46:17 - MENU002 - INFO - 加载脚本完成: 19 条指令
+2025-09-23 01:46:17 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\get_demo.menu
+2025-09-23 01:46:17 - MENU002 - INFO - 开始构建UI
+2025-09-23 01:46:17 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 01:46:17 - MENU002 - INFO - 创建主窗口: main (800x600) - 取得指令演示
+2025-09-23 01:46:17 - MENU002 - INFO - UI构建完成
+2025-09-23 01:46:17 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 01:46:17 - MENU002 - INFO - MENU002 应用启动
+2025-09-23 01:46:32 - MENU002 - WARNING - 未找到指令處理器: get window position size title
+2025-09-23 01:46:32 - MENU002 - WARNING - 绑定指令不存在: get window position size title
+2025-09-23 01:46:35 - MENU002 - WARNING - 未找到指令處理器: get control:btntest text position size font color type
+2025-09-23 01:46:35 - MENU002 - WARNING - 绑定指令不存在: get control:btnTest text position size font color type
+2025-09-23 01:46:36 - MENU002 - WARNING - 未找到指令處理器: get workspace:workarea position size color
+2025-09-23 01:46:36 - MENU002 - WARNING - 绑定指令不存在: get workspace:workArea position size color
+2025-09-23 01:46:37 - MENU002 - WARNING - 未找到指令處理器: get emoji available status
+2025-09-23 01:46:37 - MENU002 - WARNING - 绑定指令不存在: get emoji available status
+2025-09-23 01:46:38 - MENU002 - WARNING - 未找到指令處理器: get system time controls workspaces memory version
+2025-09-23 01:46:38 - MENU002 - WARNING - 绑定指令不存在: get system time controls workspaces memory version
+2025-09-23 02:45:10 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 02:45:10 - MENU002 - WARNING - 未找到配置文件，使用默认配置
+2025-09-23 02:45:10 - MENU002 - INFO - 日誌文件已創建: e:\MENU-TEST\logs\menu002_20250923.log
+2025-09-23 02:45:10 - MENU002 - INFO - 系统初始化完成
+2025-09-23 02:45:10 - MENU002 - INFO - 加载MENU脚本: e:\MENU-TEST\demo.menu
+2025-09-23 02:45:10 - MENU002 - INFO - 加载脚本完成: 13 条指令
+2025-09-23 02:45:10 - MENU002 - INFO - 初始化MENU002应用: e:\MENU-TEST\demo.menu
+2025-09-23 02:45:10 - MENU002 - INFO - 开始构建UI
+2025-09-23 02:45:10 - MENU002 - INFO - 清除所有控件和样式
+2025-09-23 02:45:10 - MENU002 - INFO - 创建主窗口: main (600x400) - My App
+2025-09-23 02:45:10 - MENU002 - INFO - API設定已更新: demo -> https://api.example.com
+2025-09-23 02:45:10 - MENU002 - INFO - API设定成功: demo
+2025-09-23 02:45:10 - MENU002 - ERROR - 创建弹出窗口失败: popupA - bad geometry specifier "-19x-19+-399+-299"
+2025-09-23 02:45:10 - MENU002 - WARNING - 弹出窗口不存在: popupA
+2025-09-23 02:45:10 - MENU002 - ERROR - 执行popup-send-data指令时出错: cmd_popup_send_data() takes 4 positional arguments but 5 were given
+2025-09-23 02:45:10 - MENU002 - INFO - UI构建完成
+2025-09-23 02:45:10 - MENU002 - INFO - MENU002 应用启动成功!
+2025-09-23 02:45:10 - MENU002 - INFO - MENU002 应用启动

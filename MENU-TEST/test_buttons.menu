@@ -1,0 +1,24 @@
+menu clear
+menu window main 600 400 "按鈕測試"
+menu style header bg="#2c3e50" color="#ecf0f1" font="Arial,16,bold"
+menu style button bg="#3498db" color="#ffffff" font="Arial,12,bold"
+
+menu control label title text="測試按鈕功能" x=200 y=20 w=200 h=30 class=header
+
+menu control button btn1 text="顯示訊息" x=50 y=80 w=120 h=35 class=button
+menu control button btn2 text="設定標題" x=200 y=80 w=120 h=35 class=button
+menu control button btn3 text="API測試" x=350 y=80 w=120 h=35 class=button
+menu control button btn4 text="最大化" x=50 y=140 w=120 h=35 class=button
+menu control button btn5 text="最小化" x=200 y=140 w=120 h=35 class=button
+
+menu control label result text="請點擊按鈕測試功能" x=50 y=200 w=500 h=30
+
+menu api-set test "https://api.example.com"
+
+menu binding btn1 click "show_message"
+menu binding btn2 click "result.text = '標題已更新！'"
+menu binding btn3 click "api-call btn3 test GET '/test' -> result.text"
+menu binding btn4 click "window-maximize main"
+menu binding btn5 click "window-minimize main"
+
+menu show

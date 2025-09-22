@@ -1,0 +1,16 @@
+menu clear
+menu window main 800 600 "自適應標題演示"
+
+menu style title_label font="Arial,32,bold" color="#333333"
+menu style subtitle_label font="Arial,16" color="#666666"
+
+# 自適應標題 - 始終在窗口正中間，大小隨窗口縮放
+menu control label main_title text="MENU002 自適應演示" relx=0.5 rely=0.4 anchor="center" class="title_label"
+
+# 自適應副標題
+menu control label subtitle text="拖拽調整窗口大小觀察效果" relx=0.5 rely=0.55 anchor="center" class="subtitle_label"
+
+# 狀態顯示
+menu control label status_info text="當前狀態：自適應模式啟用" relx=0.5 rely=0.8 anchor="center"
+
+menu show

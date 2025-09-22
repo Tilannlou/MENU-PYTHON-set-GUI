@@ -1,0 +1,14 @@
+menu clear
+menu window main 600 400 "My App"
+menu style button bg="#3498db" color="#fff" font="Arial,12,bold"
+menu control label title text="Welcome!" x=50 y=30 w=400 h=40 class=header
+menu control button btnOK text="OK" x=250 y=150 w=120 h=35 class=button
+menu grid-setup rows=4 cols=2 row_weight="1,1,1,1" col_weight="1,1"
+menu layout-grid rows=4 cols=2
+menu binding btnOK click "title.text = 'Clicked!'"
+menu api-set demo "https://api.example.com"
+menu api-call btnOK demo GET "/status" -> title.text
+menu popup-window popupA "Settings" size="400x300" offset_x=100 offset_y=100
+menu popup-content popupA "control label msg text='Hello'" "control button close text='Close'"
+menu popup-send-data popupA "Done!" -> main.title.text
+menu show

@@ -1,0 +1,37 @@
+menu clear
+menu window main 800 600 "工作區與受限Popup演示"
+
+menu style button bg="#4CAF50" color="#fff" font="Arial,10,bold"
+menu style workspace_bg bg="#f0f0f0"
+menu style label_header font="Arial,12,bold"
+
+# 創建主標題
+menu control label title_label text="工作區與受限Popup演示" x=50 y=20 w=400 h=30 class=label_header
+
+# 創建工作區（帶邊框的容器）
+menu workspace work_area 50 70 350 400 bg="#f8f8f8"
+
+# 在工作區中添加控件
+menu workspace-add work_area label work_title text="工作區域" x=10 y=10 w=150 h=25 class=label_header
+menu workspace-add work_area button btn1 text="工作區按鈕1" x=10 y=50 w=120 h=30 class=button
+menu workspace-add work_area button btn2 text="工作區按鈕2" x=140 y=50 w=120 h=30 class=button
+menu workspace-add work_area entry input1 text="" placeholder="輸入內容..." x=10 y=100 w=250 h=25
+
+# 主區域按鈕
+menu control button open_popup text="打開受限Popup" x=450 y=100 w=150 h=35 class=button
+menu control button open_free_popup text="打開自由Popup" x=450 y=150 w=150 h=35 class=button
+menu control label status_label text="狀態：就緒" x=50 y=500 w=400 h=25
+
+# 綁定事件
+menu binding open_popup click "popup-window test_popup '受限Popup窗口' size='300x200' offset_x=100 offset_y=100 constrain_to_parent=true"
+menu binding open_free_popup click "popup-window free_popup '自由Popup窗口' size='300x200' offset_x=600 offset_y=200 constrain_to_parent=false"
+
+# 設置Popup內容（會在Popup打開後執行）
+menu popup-content test_popup "control label msg text='這是受限的Popup窗口' x=20 y=20 w=260 h=25" "control button close_btn text='關閉' x=100 y=70 w=80 h=30"
+menu popup-content free_popup "control label msg text='這是自由的Popup窗口' x=20 y=20 w=260 h=25" "control button close_btn text='關閉' x=100 y=70 w=80 h=30"
+
+# 綁定Popup關閉事件
+menu popup-send-data test_popup "Popup已關閉" -> status_label.text
+menu popup-send-data free_popup "自由Popup已關閉" -> status_label.text
+
+menu show
