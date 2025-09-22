@@ -1,0 +1,1235 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import shlex
+import subprocess
+import sys
+import tkinter as tk
+from tkinter import messagebox, scrolledtext
+import requests
+import json
+import threading
+from urllib.parse import urljoin
+import os
+import re
+
+# ─── English Command Registry ──────────────────────────────────────────────
+class CommandRegistry:
+    def __init__(self):
+        self.handlers = {}
+
+    def register(self, name):
+        def decorator(fn):
+            self.handlers[name.lower()] = fn
+            return fn
+        return decorator
+
+    def get(self, name):
+        return self.handlers.get(name.lower())
+
+# Command aliases (English shortcuts)
+CMD_ALIASES = {
+    "win": "window",
+    "ctrl": "control",
+    "api-set": "API設定",
+    "api-call": "API呼叫",
+    "api": "API設定",
+    "api-preset": "API預設",
+    "api-call-preset": "API呼叫預設",
+    "display-area": "顯示區域",
+    "display-content": "顯示內容",
+    "display-text": "顯示文字",
+    "set-language": "設定語言",
+    "generate-code": "生成代碼",
+    "clear-display": "清除顯示",
+    "adaptive": "自適應",
+    "relative": "相對位置",
+    "grid-setup": "網格佈局",
+    "grid-pos": "網格位置",
+    "layout-grid": "LayoutGrid",
+    "grid-layout": "網格佈局",
+}
+
+registry = CommandRegistry()
+
+# ─── Language Manager ─────────────────────────────────────────────────────
+class LanguageManager:
+    def __init__(self):
+        self.translations = {
+            "en": {
+                "welcome": "Welcome to MENU002",
+                "api_connected": "API Connected",
+                "error": "Error",
+                "success": "Success",
+                "ready": "Ready",
+                "loading": "Loading...",
+                "complete": "Complete"
+            },
+            "zh-TW": {
+                "welcome": "歡迎使用 MENU002",
+                "api_connected": "API 已連接",
+                "error": "錯誤",
+                "success": "成功",
+                "ready": "就緒",
+                "loading": "載入中...",
+                "complete": "完成"
+            }
+        }
+        self.current_lang = "zh-TW"  # 預設繁體中文
+    
+    def set_language(self, lang_code):
+        """設定當前語言"""
+        if lang_code in self.translations:
+            self.current_lang = lang_code
+            return True
+        return False
+    
+    def get_text(self, key):
+        """獲取翻譯文字"""
+        if self.current_lang in self.translations and key in self.translations[self.current_lang]:
+            return self.translations[self.current_lang][key]
+        return key
+
+# ─── API Manager ─────────────────────────────────────────────────────────────
+class APIManager:
+    def __init__(self):
+        self.apis = {}  # 存儲所有API配置
+        
+    def add_api(self, name, url, key=None, username=None, password=None, show_secret=False):
+        """添加或更新API配置"""
+        # 確保URL以http://或https://開頭
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url  # 預設使用HTTPS
+        
+        self.apis[name] = {
+            'url': url,
+            'key': key,
+            'username': username,
+            'password': password,
+            'show_secret': show_secret
+        }
+        print(f"API設定已更新: {name} -> {url}")
+    
+    def call_api(self, api_name, method, path, data_template=None, context=None):
+        """呼叫API"""
+        if api_name not in self.apis:
+            raise ValueError(f"未找到API配置: {api_name}")
+        
+        api_config = self.apis[api_name]
+        
+        # 處理路徑開頭的斜線
+        if not path.startswith('/'):
+            path = '/' + path
+            
+        full_url = urljoin(api_config['url'], path)
+        
+        # 準備請求頭
+        headers = {"Content-Type": "application/json"}
+        if api_config['key']:
+            # 支援不同類型的授權頭
+            if api_config['key'].startswith('Bearer '):
+                headers['Authorization'] = api_config['key']
+            elif api_config['key'].startswith('Basic '):
+                headers['Authorization'] = api_config['key']
+            else:
+                headers['Authorization'] = f"Bearer {api_config['key']}"
+        
+        # 準備請求體
+        data = None
+        if data_template and context:
+            try:
+                # 替換模板中的變數
+                formatted_data = data_template.format(**context)
+                data = json.loads(formatted_data)
+            except Exception as e:
+                print(f"數據解析錯誤: {e}")
+                # 如果JSON解析失敗，嘗試作為純文字模板處理
+                try:
+                    formatted_data = data_template.format(**context)
+                    data = formatted_data
+                except Exception as e2:
+                    print(f"模板格式化錯誤: {e2}")
+                    data = data_template
+        
+        # 發送請求
+        method = method.upper()
+        try:
+            if method == 'GET':
+                response = requests.get(full_url, headers=headers, params=data, timeout=30)
+            elif method == 'POST':
+                response = requests.post(full_url, headers=headers, json=data, timeout=30)
+            elif method == 'PUT':
+                response = requests.put(full_url, headers=headers, json=data, timeout=30)
+            elif method == 'DELETE':
+                response = requests.delete(full_url, headers=headers, timeout=30)
+            else:
+                raise ValueError(f"不支援的HTTP方法: {method}")
+            
+            response.raise_for_status()  # 如果響應錯誤則拋出異常
+            
+            # 嘗試解析JSON響應，如果不是JSON則返回文本
+            try:
+                return response.json()
+            except json.JSONDecodeError:
+                return {"response": response.text, "status_code": response.status_code}
+                
+        except requests.exceptions.RequestException as e:
+            return {"error": f"API請求失敗: {str(e)}"}
+        except json.JSONDecodeError as e:
+            return {"error": f"JSON解析失敗: {str(e)}"}
+    
+    def test_connection(self, api_name):
+        """測試 API 連接"""
+        if api_name not in self.apis:
+            return {"error": f"未找到API配置: {api_name}"}
+        
+        api_config = self.apis[api_name]
+        try:
+            # 嘗試連接 API 根路徑
+            response = requests.get(api_config['url'], timeout=10)
+            return {
+                "success": response.status_code == 200,
+                "status": response.status_code,
+                "message": "連接成功" if response.status_code == 200 else f"連接失敗: {response.status_code}"
+            }
+        except requests.exceptions.RequestException as e:
+            return {"error": f"連接測試失敗: {str(e)}"}
+
+# 全局API管理器
+api_manager = APIManager()
+
+# ─── Core Application ─────────────────────────────────────────────────────────
+class MenuApp:
+    def __init__(self, script_path):
+        self.script_path  = script_path
+        self.controls     = {}    # name → widget
+        self.styles       = {}    # className → {prop: value}
+        self.exec_map     = {}    # buttonName → [cmd_template,…]
+        self.binding_list = []    # [(widgetName, event, action), …]
+        self.root         = None
+        self.grid_cfg     = None  # Grid configuration for responsive layout
+        self.display_areas = {}   # 存儲顯示區域配置
+        self.language = LanguageManager()  # 多語言支持
+        self.show_code_comparison = False  # 是否顯示代碼對照
+        self.cmds         = self.load_script()
+
+    def load_script(self):
+        cmds = []
+        with open(self.script_path, encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if not line or not line.startswith(("menu ", "#")):
+                    continue
+
+                # Skip comments
+                if line.startswith("#"):
+                    continue
+
+                toks = shlex.split(line)[1:]  # Skip the 'menu' prefix
+                if not toks:
+                    continue
+
+                # Support both English shortcuts and full commands
+                cmd = toks[0].lower()
+                if cmd in CMD_ALIASES:
+                    cmd = CMD_ALIASES[cmd]
+                    toks = [cmd] + toks[1:]
+
+                if cmd == "show":
+                    break
+
+                cmds.append(toks)
+        return cmds
+
+    def build_ui(self):
+        # 存儲所有popup窗口的引用
+        if not hasattr(self, 'popup_windows'):
+            self.popup_windows = {}
+
+        # 1. 先建立 Window / Style / Control / Popup
+        for toks in self.cmds:
+            cmd = toks[0].lower()
+            if cmd in ['popup-window', 'popup-content', 'popup-send-data']:
+                # 處理popup相關指令，稍後再執行
+                continue
+
+            handler = registry.get(cmd)
+            if handler:
+                try:
+                    handler(self, *toks[1:])
+                except Exception as e:
+                    print(f"執行指令 {cmd} 時出錯: {e}")
+
+        # 2. 處理插件指令（如果有）
+        if hasattr(self, 'command_bus'):
+            for toks in self.cmds:
+                cmd = toks[0].lower()
+                if hasattr(self.command_bus, 'command_mapper') and cmd in self.command_bus.command_mapper:
+                    try:
+                        self.command_bus.execute_command(cmd, self, *toks[1:])
+                    except Exception as e:
+                        print(f"執行插件指令 {cmd} 時出錯: {e}")
+
+        # 3. 處理popup窗口相關指令
+        popup_commands = {'popup-window': [], 'popup-content': [], 'popup-send-data': []}
+        for toks in self.cmds:
+            cmd = toks[0].lower()
+            if cmd in popup_commands:
+                popup_commands[cmd].append(toks)
+
+        # 按照正確順序執行popup指令
+        for cmd_toks in popup_commands['popup-window']:
+            try:
+                registry.get('popup-window')(self, *cmd_toks[1:])
+            except Exception as e:
+                print(f"執行popup-window指令時出錯: {e}")
+
+        for cmd_toks in popup_commands['popup-content']:
+            try:
+                registry.get('popup-content')(self, *cmd_toks[1:])
+            except Exception as e:
+                print(f"執行popup-content指令時出錯: {e}")
+
+        for cmd_toks in popup_commands['popup-send-data']:
+            try:
+                registry.get('popup-send-data')(self, *cmd_toks[1:])
+            except Exception as e:
+                print(f"執行popup-send-data指令時出錯: {e}")
+
+        # 4. 綁定 Exec 行為
+        for btn_name, templates in self.exec_map.items():
+            widget = self.controls.get(btn_name)
+            if not widget:
+                continue
+            cb = self.make_exec_cb(templates)
+            # Button 用 config，有效觸發 command
+            if isinstance(widget, tk.Button):
+                widget.config(command=cb)
+            else:
+                widget.bind("<Button-1>", lambda e, fn=cb: fn())
+
+        # 5. 綁定 Binding 事件
+        for name, event, action in self.binding_list:
+            widget = self.controls.get(name)
+            if not widget:
+                continue
+            # 常見事件對應
+            evt = {
+                "click": "<Button-1>",
+                "doubleclick": "<Double-Button-1>",
+                "keyrelease": "<KeyRelease>"
+            }.get(event.lower(), f"<{event}>")
+            widget.bind(evt, lambda e, act=action: self.handle_binding(act))
+
+        # 6. 如果啟用代碼對照，顯示生成的代碼
+        if self.show_code_comparison:
+            self.generate_code_view()
+
+    def make_exec_cb(self, templates):
+        def on_click():
+            ctx = {n: w.get()
+                   for n, w in self.controls.items()
+                   if hasattr(w, "get")}
+            for tpl in templates:
+                try:
+                    cmd = tpl.format(**ctx)
+                    proc = subprocess.run(cmd, shell=True,
+                                          capture_output=True, text=True)
+                    messagebox.showinfo("執行結果", proc.stdout or proc.stderr)
+                except Exception as ex:
+                    messagebox.showerror("錯誤", str(ex))
+        return on_click
+
+    def handle_binding(self, action):
+        # 只支持「target.attr = expr」格式
+        try:
+            lhs, rhs = action.split("=", 1)
+            target, attr = lhs.strip().split(".", 1)
+            # 準備上下文：Entry.value
+            ctx = {n: w.get()
+                   for n, w in self.controls.items()
+                   if hasattr(w, "get")}
+            val = eval(rhs.strip(), {}, ctx)
+            widget = self.controls.get(target)
+            if not widget:
+                return
+            if attr == "text" and hasattr(widget, "config"):
+                widget.config(text=val)
+            elif attr == "value" and isinstance(widget, tk.Entry):
+                widget.delete(0, "end")
+                widget.insert(0, val)
+        except Exception as ex:
+            messagebox.showerror("綁定錯誤", str(ex))
+
+    def generate_code_view(self):
+        """生成並顯示代碼對照視圖"""
+        if not self.root:
+            return
+        
+        # 創建代碼對照窗口
+        code_window = tk.Toplevel(self.root)
+        code_window.title("代碼對照")
+        code_window.geometry("800x600")
+        
+        # 創建文本框顯示生成的代碼
+        code_text = scrolledtext.ScrolledText(code_window, wrap=tk.WORD)
+        code_text.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        
+        # 生成代碼
+        code_lines = ["# MENU002 生成的代碼"]
+        code_lines.append("import tkinter as tk")
+        code_lines.append("")
+        code_lines.append("class GeneratedApp:")
+        code_lines.append("    def __init__(self):")
+        code_lines.append("        self.root = tk.Tk()")
+        code_lines.append(f"        self.root.title('{self.root.title()}')")
+        code_lines.append(f"        self.root.geometry('{self.root.winfo_width()}x{self.root.winfo_height()}')")
+        code_lines.append("        self.controls = {}")
+        code_lines.append("")
+        
+        # 添加控件創建代碼
+        for name, widget in self.controls.items():
+            if isinstance(widget, tk.Button):
+                code_lines.append(f"        self.controls['{name}'] = tk.Button(self.root, text='{widget.cget('text')}')")
+            elif isinstance(widget, tk.Label):
+                code_lines.append(f"        self.controls['{name}'] = tk.Label(self.root, text='{widget.cget('text')}')")
+            elif isinstance(widget, tk.Entry):
+                code_lines.append(f"        self.controls['{name}'] = tk.Entry(self.root)")
+            
+            # 添加位置信息
+            geometry = widget.winfo_geometry()
+            code_lines.append(f"        self.controls['{name}'].place({geometry})")
+            code_lines.append("")
+        
+        code_lines.append("    def run(self):")
+        code_lines.append("        self.root.mainloop()")
+        code_lines.append("")
+        code_lines.append("if __name__ == '__main__':")
+        code_lines.append("    app = GeneratedApp()")
+        code_lines.append("    app.run()")
+        
+        # 顯示生成的代碼
+        code_text.insert(tk.END, "\n".join(code_lines))
+        code_text.config(state=tk.DISABLED)
+
+    def run(self):
+        if self.root:
+            self.root.mainloop()
+
+# ─── Command Handlers ────────────────────────────────────────────────────────
+@registry.register("LayoutGrid")
+def cmd_layout_grid(app, *props):
+    cfg = dict(p.split("=",1) for p in props)
+    app.grid_cfg = {
+      "rows": int(cfg["rows"]),
+      "cols": int(cfg["cols"]),
+      "pad": int(cfg.get("padding",0))
+    }
+    # 設定權重，讓 row/col 隨視窗放大
+    for i in range(app.grid_cfg["rows"]):
+        app.root.grid_rowconfigure(i, weight=1, pad=app.grid_cfg["pad"])
+    for j in range(app.grid_cfg["cols"]):
+        app.root.grid_columnconfigure(j, weight=1, pad=app.grid_cfg["pad"])
+
+@registry.register("Control")
+def cmd_control(app, ctrl_type, name, *props):
+    P = {}
+    for p in props:
+        if "=" in p:
+            k, v = p.split("=", 1)
+            P[k] = v.strip('"')
+
+    x = int(P.get("x", 0))
+    y = int(P.get("y", 0))
+    w = int(P.get("w", 0)) if "w" in P else None
+    h = int(P.get("h", 0)) if "h" in P else None
+    cls = P.get("class")
+    style = app.styles.get(cls, {}) if cls else {}
+
+    widget = None
+    t = ctrl_type.lower()
+    text = P.get("text", "")
+    if t == "button":
+        widget = tk.Button(app.root, text=text)
+    elif t in ("entry", "edit"):
+        widget = tk.Entry(app.root)
+        placeholder = P.get("placeholder")
+        if placeholder:
+            widget.insert(0, placeholder)
+    elif t in ("label", "text"):
+        widget = tk.Label(app.root, text=text)
+    else:
+        widget = tk.Label(app.root, text=text)
+
+    # 套用 style
+    if "bg" in style:
+        widget.config(bg=style["bg"])
+    if "color" in style:
+        widget.config(fg=style["color"])
+    if "font" in style:
+        widget.config(font=tuple(style["font"].split(",")))
+
+    # 放置
+    if hasattr(app, "grid_cfg") and "row" in P:
+        widget.grid(
+            row=int(P["row"]), column=int(P["col"]),
+            rowspan=int(P.get("rowspan", 1)),
+            columnspan=int(P.get("colspan", 1)),
+            sticky=P.get("sticky", "")
+        )
+    else:
+        place_kwargs = {}
+        if w is not None and h is not None:
+            place_kwargs = {"x": x, "y": y, "width": w, "height": h}
+        else:
+            place_kwargs = {"x": x, "y": y}
+        widget.place(**place_kwargs)
+
+    app.controls[name] = widget
+    if "relx" in P:
+        widget.place(
+            relx=float(P["relx"]),
+            rely=float(P["rely"]),
+            relwidth=float(P["relwidth"]),
+            relheight=float(P["relheight"]),
+            anchor=P.get("anchor")
+        )
+    if "anchor" in P:
+        widget.place(anchor=P["anchor"])
+
+@registry.register("clear")
+def cmd_clear(app, *args):
+    app.controls.clear()
+    app.styles.clear()
+    app.exec_map.clear()
+    app.binding_list.clear()
+    app.root = None
+
+@registry.register("自適應")
+def cmd_adaptive_layout(app, *args):
+    """Enable adaptive/responsive layout - 啟用自適應佈局"""
+    # This could configure the app to handle window resizing
+    if app.root:
+        app.root.resizable(True, True)  # Allow resizing
+    print("Adaptive layout enabled")
+
+@registry.register("相對位置")
+def cmd_relative_position(app, ctrl_name, relx=None, rely=None, relwidth=None, relheight=None, anchor="nw"):
+    """Set relative positioning - 設定相對位置"""
+    widget = app.controls.get(ctrl_name)
+    if not widget:
+        print(f"Warning: Control '{ctrl_name}' not found for relative positioning")
+        return
+
+    place_args = {"anchor": anchor}
+    if relx: place_args["relx"] = float(relx)
+    if rely: place_args["rely"] = float(rely)
+    if relwidth: place_args["relwidth"] = float(relwidth)
+    if relheight: place_args["relheight"] = float(relheight)
+
+    widget.place(**place_args)
+
+@registry.register("網格佈局")
+def cmd_grid_layout(app, rows=None, cols=None, row_weight=None, col_weight=None):
+    """Setup grid layout - 設定網格佈局"""
+    cfg = {}
+    if rows: cfg["rows"] = int(rows)
+    if cols: cfg["cols"] = int(cols)
+
+    if row_weight:
+        # Set row weights - 設定行權重
+        for i, weight in enumerate(row_weight.split(",")):
+            if i < cfg.get("rows", 0):
+                app.root.grid_rowconfigure(i, weight=int(weight))
+
+    if col_weight:
+        # Set column weights - 設定列權重
+        for i, weight in enumerate(col_weight.split(",")):
+            if i < cfg.get("cols", 0):
+                app.root.grid_columnconfigure(i, weight=int(weight))
+
+@registry.register("網格位置")
+def cmd_grid_position(app, ctrl_name, row=None, col=None, rowspan="1", colspan="1", sticky="nsew"):
+    """Position control in grid - 在網格中定位控件"""
+    widget = app.controls.get(ctrl_name)
+    if not widget:
+        print(f"Warning: Control '{ctrl_name}' not found for grid positioning")
+        return
+
+    grid_args = {"sticky": sticky}
+    if row: grid_args["row"] = int(row)
+    if col: grid_args["column"] = int(col)
+    if rowspan: grid_args["rowspan"] = int(rowspan)
+    if colspan: grid_args["columnspan"] = int(colspan)
+
+    widget.grid(**grid_args)
+
+@registry.register("window")
+def cmd_window(app, name, width, height, title):
+    app.root = tk.Tk()
+    app.root.title(title)
+    app.root.geometry(f"{width}x{height}")
+    # 如果 style[name] 裡有 bg，就套用
+    style = app.styles.get(name, {})
+    if "bg" in style:
+        app.root.config(bg=style["bg"])
+
+    # 開發階段暫時禁用窗口變形功能
+    # 注釋掉以下代碼，直到需要時再啟用
+    '''
+    # 设置窗口变形配置 (从窗口名获取配置)
+    shape_config = app.styles.get(f"{name}_shape", {})
+    if shape_config.get("frameless"):
+        try:
+            # 尝试设置无边框模式 (如果PyQt5可用，将会更完整)
+            app.root.overrideredirect(True)  # 移除系统装饰
+        except:
+            print(f"Warning: Frameless mode not available for window {name}")
+    if shape_config.get("no-system-buttons"):
+        try:
+            # Tkinter原生移除系统按钮的方法有限，但我们设置了标志
+            app.root.overrideredirect(True)
+            print(f"System buttons removed for window {name}")
+        except:
+            print(f"Warning: Could not remove system buttons for window {name}")
+    '''
+
+@registry.register("style")
+def cmd_style(app, class_name, *props):
+    d = {}
+    for p in props:
+        if "=" in p:
+            k, v = p.split("=", 1)
+            d[k] = v.strip('"')
+    app.styles[class_name] = d
+
+@registry.register("API設定")
+def handle_api_setup(app, api_name, url, *args):
+    """Handle API setup commands (support both English and Chinese parameters)"""
+    # Parse optional parameters (support English and Chinese)
+    key = None
+    username = None
+    password = None
+    show_secret = False
+
+    # English parameters
+    param_map = {
+        "key=": "key",
+        "username=": "username",
+        "password=": "password",
+        "show-secret=": "show_secret"
+    }
+
+    # Chinese parameters (legacy support)
+    param_map.update({
+        "金鑰=": "key",
+        "帳號=": "username",
+        "密碼=": "password",
+        "顯示密碼=": "show_secret"
+    })
+
+    for arg in args:
+        for prefix, param in param_map.items():
+            if arg.startswith(prefix):
+                value = arg.split("=", 1)[1]
+                if param == "show_secret":
+                    show_secret = value.lower() in ("true", "1", "yes")
+                else:
+                    locals()[param] = value
+                break
+
+    # Add to API manager
+    api_manager.add_api(api_name, url, key, username, password, show_secret)
+
+@registry.register("API呼叫")
+def handle_api_call(app, btn_name, api_name, method, path, *args):
+    """處理API呼叫指令"""
+    # 解析可選參數
+    data_template = None
+    target = None
+
+    # 找到 -> 符號並分割參數
+    if '->' in args:
+        arrow_index = args.index('->')
+        if arrow_index + 1 < len(args):
+            target = args[arrow_index + 1]
+        data_args = args[:arrow_index]
+    else:
+        data_args = args
+
+    # 合併數據模板
+    if data_args:
+        data_template = ' '.join(data_args)
+
+    # 獲取按鈕控件
+    btn = app.controls.get(btn_name)
+    if not btn:
+        raise ValueError(f"找不到按鈕: {btn_name}")
+
+    def on_click():
+        # 準備上下文數據
+        ctx = {name: widget.get() for name, widget in app.controls.items()
+               if hasattr(widget, 'get')}
+
+        # 在後台線程中執行API呼叫
+        def call_api_task():
+            try:
+                result = api_manager.call_api(api_name, method, path, data_template, ctx)
+
+                # 更新UI（需要在主線程中執行）
+                def update_ui():
+                    if target:
+                        if '.' in target:
+                            widget_name, attr = target.split('.', 1)
+                            widget = app.controls.get(widget_name)
+                            if widget:
+                                if attr == 'text' and hasattr(widget, 'config'):
+                                    widget.config(text=str(result))
+                                elif attr == 'value' and hasattr(widget, 'delete') and hasattr(widget, 'insert'):
+                                    widget.delete(0, 'end')
+                                    widget.insert(0, str(result))
+                                elif attr == 'content' and hasattr(widget, 'delete') and hasattr(widget, 'insert'):
+                                    # 對於多行文本控件
+                                    widget.config(state="normal")
+                                    widget.delete(1.0, "end")
+                                    widget.insert("end", str(result))
+                                    widget.config(state="disabled")
+                        else:
+                            # 存儲到應用變量
+                            setattr(app, target, result)
+
+                app.root.after(0, update_ui)
+
+            except Exception as e:
+                error_msg = f"API呼叫失敗: {str(e)}"
+                def show_error():
+                    if target and '.' in target:
+                        widget_name, attr = target.split('.', 1)
+                        widget = app.controls.get(widget_name)
+                        if widget and attr == 'text' and hasattr(widget, 'config'):
+                            widget.config(text=error_msg)
+                app.root.after(0, show_error)
+
+        threading.Thread(target=call_api_task, daemon=True).start()
+
+    # 綁定點擊事件
+    if hasattr(btn, 'config'):
+        btn.config(command=on_click)
+    else:
+        btn.bind('<Button-1', lambda e: on_click())
+
+@registry.register("API測試連接")
+def handle_api_test_connection(app, api_name, target=None):
+    """測試 API 連接狀態"""
+    result = api_manager.test_connection(api_name)
+    
+    if target:
+        if '.' in target:
+            widget_name, attr = target.split('.', 1)
+            widget = app.controls.get(widget_name)
+            if widget:
+                if attr == 'text' and hasattr(widget, 'config'):
+                    widget.config(text=str(result))
+                elif attr == 'value' and hasattr(widget, 'delete') and hasattr(widget, 'insert'):
+                    widget.delete(0, 'end')
+                    widget.insert(0, str(result))
+        else:
+            setattr(app, target, result)
+    
+    return result
+
+@registry.register("顯示區域")
+def cmd_display_area(app, area_name, x, y, width, height, *props):
+    """創建或配置顯示區域"""
+    P = {}
+    for p in props:
+        if "=" in p:
+            k, v = p.split("=", 1)
+            P[k] = v.strip('"')
+    
+    # 創建顯示區域框架
+    frame = tk.Frame(app.root, bg=P.get("bg", "#ffffff"))
+    frame.place(x=int(x), y=int(y), width=int(width), height=int(height))
+    
+    # 添加標題標籤（可選）
+    if "title" in P:
+        title_label = tk.Label(frame, text=P["title"], bg=P.get("bg", "#ffffff"), 
+                              fg=P.get("color", "#000000"), 
+                              font=P.get("font", "Arial,10"))
+        title_label.pack(pady=5)
+    
+    # 創建內容區域
+    content_text = tk.Text(frame, wrap="word", bg=P.get("content_bg", "#f0f0f0"),
+                          fg=P.get("content_color", "#000000"),
+                          font=P.get("content_font", "Arial,10"))
+    content_text.pack(fill="both", expand=True, padx=5, pady=5)
+    
+    # 存儲顯示區域
+    app.display_areas[area_name] = {
+        "frame": frame,
+        "text_widget": content_text,
+        "config": P
+    }
+
+@registry.register("顯示內容")
+def cmd_display_content(app, area_name, content, *props):
+    """在指定顯示區域顯示內容"""
+    if area_name not in app.display_areas:
+        print(f"警告: 顯示區域 '{area_name}' 不存在")
+        return
+    
+    display_area = app.display_areas[area_name]
+    text_widget = display_area["text_widget"]
+    
+    # 解析顯示屬性
+    P = {}
+    for p in props:
+        if "=" in p:
+            k, v = p.split("=", 1)
+            P[k] = v.strip('"')
+    
+    # 清空現有內容
+    text_widget.config(state="normal")
+    text_widget.delete(1.0, "end")
+    
+    # 添加新內容
+    text_widget.insert("end", content)
+    
+    # 應用樣式
+    if "color" in P:
+        text_widget.config(fg=P["color"])
+    if "font" in P:
+        text_widget.config(font=tuple(P["font"].split(",")))
+    if "size" in P:
+        # 調整字體大小
+        current_font = text_widget.cget("font")
+        font_name = current_font[0] if isinstance(current_font, tuple) else "Arial"
+        text_widget.config(font=(font_name, int(P["size"])))
+    
+    text_widget.config(state="disabled")
+
+@registry.register("清除顯示")
+def cmd_clear_display(app, area_name):
+    """清除指定顯示區域的內容"""
+    if area_name not in app.display_areas:
+        print(f"警告: 顯示區域 '{area_name}' 不存在")
+        return
+    
+    display_area = app.display_areas[area_name]
+    text_widget = display_area["text_widget"]
+    
+    text_widget.config(state="normal")
+    text_widget.delete(1.0, "end")
+    text_widget.config(state="disabled")
+
+@registry.register("設定語言")
+def cmd_set_language(app, lang_code):
+    """設定界面語言"""
+    if app.language.set_language(lang_code):
+        print(f"語言已設定為: {lang_code}")
+    else:
+        print(f"不支援的語言: {lang_code}")
+
+@registry.register("顯示文字")
+def cmd_display_text(app, key, target, *props):
+    """顯示多語言文字"""
+    text = app.language.get_text(key)
+    
+    # 檢查目標是否是顯示區域
+    if target in app.display_areas:
+        # 在顯示區域顯示文字
+        display_area = app.display_areas[target]
+        text_widget = display_area["text_widget"]
+        
+        text_widget.config(state="normal")
+        text_widget.delete(1.0, "end")
+        text_widget.insert("end", text)
+        text_widget.config(state="disabled")
+    else:
+        # 在控件上顯示文字
+        widget = app.controls.get(target)
+        if widget:
+            if hasattr(widget, 'config'):
+                widget.config(text=text)
+            elif hasattr(widget, 'delete') and hasattr(widget, 'insert'):
+                widget.delete(0, "end")
+                widget.insert(0, text)
+
+@registry.register("生成代碼")
+def cmd_generate_code(app, target=None):
+    """生成並顯示對應的 Python 代碼"""
+    # 獲取當前的 GUI 配置
+    code_lines = ["# MENU002 生成的代碼"]
+    code_lines.append("import tkinter as tk")
+    code_lines.append("")
+    code_lines.append("class GeneratedApp:")
+    code_lines.append("    def __init__(self):")
+    code_lines.append("        self.root = tk.Tk()")
+    if app.root:
+        code_lines.append(f"        self.root.title('{app.root.title()}')")
+        code_lines.append(f"        self.root.geometry('{app.root.winfo_width()}x{app.root.winfo_height()}')")
+    else:
+        code_lines.append("        self.root.title('Generated App')")
+        code_lines.append("        self.root.geometry('800x600')")
+    code_lines.append("        self.controls = {}")
+    code_lines.append("")
+    
+    # 添加控件創建代碼
+    for name, widget in app.controls.items():
+        if isinstance(widget, tk.Button):
+            code_lines.append(f"        self.controls['{name}'] = tk.Button(self.root, text='{widget.cget('text')}')")
+        elif isinstance(widget, tk.Label):
+            code_lines.append(f"        self.controls['{name}'] = tk.Label(self.root, text='{widget.cget('text')}')")
+        elif isinstance(widget, tk.Entry):
+            code_lines.append(f"        self.controls['{name}'] = tk.Entry(self.root)")
+        
+        # 添加位置信息
+        geometry = widget.winfo_geometry()
+        code_lines.append(f"        self.controls['{name}'].place({geometry})")
+        code_lines.append("")
+    
+    code_lines.append("    def run(self):")
+    code_lines.append("        self.root.mainloop()")
+    code_lines.append("")
+    code_lines.append("if __name__ == '__main__':")
+    code_lines.append("    app = GeneratedApp()")
+    code_lines.append("    app.run()")
+    
+    # 顯示生成的代碼
+    code_text = "\n".join(code_lines)
+    
+    if target and target in app.display_areas:
+        display_area = app.display_areas[target]
+        text_widget = display_area["text_widget"]
+        
+        text_widget.config(state="normal")
+        text_widget.delete(1.0, "end")
+        text_widget.insert("end", code_text)
+        text_widget.config(state="disabled")
+    else:
+        # 創建新窗口顯示代碼
+        code_window = tk.Toplevel(app.root if app.root else tk.Tk())
+        code_window.title("生成的代碼")
+        code_window.geometry("800x600")
+        
+        code_text_widget = scrolledtext.ScrolledText(code_window, wrap=tk.WORD)
+        code_text_widget.pack(fill=tk.BOTH, expand=True, padx=10, pady=10)
+        code_text_widget.insert(tk.END, code_text)
+        code_text_widget.config(state=tk.DISABLED)
+
+@registry.register("開啟程式對照")
+def cmd_enable_code_comparison(app, *args):
+    """啟用代碼對照功能"""
+    app.show_code_comparison = True
+    print("代碼對照功能已啟用")
+
+# ============== POPUP多層次GUI指令 ==============
+
+@registry.register("popup-window")
+def cmd_popup_window(app, window_id, title=None, size=None, offset_x=None, offset_y=None, *args):
+    """創建彈出窗口 - Create a popup sub-window"""
+    # 解析參數
+    if title is None:
+        title = window_id
+
+    # 解析size (format: "400x300")
+    width, height = 300, 200  # default size
+    if size:
+        try:
+            w_str, h_str = size.split('x')
+            width = int(w_str)
+            height = int(h_str)
+        except ValueError:
+            pass
+
+    # 解析offset
+    off_x = 50
+    off_y = 50
+    if offset_x is not None and offset_y is not None:
+        off_x = int(offset_x)
+        off_y = int(offset_y)
+
+    # 計算窗口位置 - 相對於主窗口的偏移
+    if app.root:
+        main_x = app.root.winfo_x()
+        main_y = app.root.winfo_y()
+        popup_x = main_x + off_x
+        popup_y = main_y + off_y
+    else:
+        popup_x = 200 + off_x
+        popup_y = 200 + off_y
+
+    # 創建新的Tkinter窗口
+    popup = tk.Toplevel(app.root) if app.root else tk.Tk()
+    popup.title(title)
+    popup.geometry(f"{width}x{height}+{popup_x}+{popup_y}")
+
+    # 開發階段暫時禁用窗口變形功能
+    # 注釋掉以下代碼，直到需要時再啟用
+    '''
+    # 檢查GUI變形設定
+    system_config = app.styles.get("system", {})
+    if system_config.get("frameless"):
+        try:
+            popup.overrideredirect(True)
+        except Exception as e:
+            print(f"無法設置無邊框模式: {e}")
+    if system_config.get("no-system-buttons"):
+        try:
+            popup.overrideredirect(True)
+        except Exception as e:
+            print(f"無法移除系統按鈕: {e}")
+    '''
+
+    # 存儲popup窗口
+    if not hasattr(app, 'popup_windows'):
+        app.popup_windows = {}
+
+    app.popup_windows[window_id] = popup
+    popup.popup_id = window_id  # 給窗口添加ID標識
+
+    print(f"創建彈出窗口: {window_id} - {title} ({width}x{height})")
+    return popup
+
+@registry.register("popup-content")
+def cmd_popup_content(app, window_id, *content_commands):
+    """為彈出窗口設置內容 - Set content for popup window"""
+    if not hasattr(app, 'popup_windows') or window_id not in app.popup_windows:
+        print(f"警告: 彈出窗口 '{window_id}' 不存在")
+        return
+
+    popup = app.popup_windows[window_id]
+
+    # 創建臨時的子應用對象來處理popup內容
+    popup_app = PopupApp(popup, content_commands)
+    popup_app.build_popup_content()
+
+    print(f"設置彈出窗口 '{window_id}' 的內容")
+
+class PopupApp:
+    """處理popup窗口內容的子應用類"""
+    def __init__(self, popup_window, content_commands):
+        self.popup = popup_window
+        self.controls = {}
+        self.styles = {}
+        self.exec_map = {}
+        self.binding_list = []
+        self.content_commands = content_commands
+        self.display = None
+
+    def build_popup_content(self):
+        """建立popup窗口的內容"""
+        # 創建臨時的指令處理器
+        temp_registry = CommandRegistry()
+
+        # 注冊基本的GUI指令
+        @temp_registry.register("control")
+        def temp_control(ctrl_type, name, *props):
+            P = {}
+            for p in props:
+                if "=" in p:
+                    k, v = p.split("=", 1)
+                    P[k] = v.strip('"')
+
+            x = int(P.get("x", 10))
+            y = int(P.get("y", 10))
+            w = int(P.get("w", 0)) if "w" in P else None
+            h = int(P.get("h", 0)) if "h" in P else None
+
+            widget = None
+            t = ctrl_type.lower()
+            text = P.get("text", "")
+            if t == "button":
+                widget = tk.Button(self.popup, text=text)
+            elif t in ("entry", "edit"):
+                widget = tk.Entry(self.popup)
+                placeholder = P.get("placeholder")
+                if placeholder:
+                    widget.insert(0, placeholder)
+            elif t in ("label", "text"):
+                widget = tk.Label(self.popup, text=text)
+            else:
+                widget = tk.Label(self.popup, text=text)
+
+            # 放置控件
+            place_kwargs = {"x": x, "y": y}
+            if w is not None and h is not None:
+                place_kwargs["width"] = w
+                place_kwargs["height"] = h
+            widget.place(**place_kwargs)
+
+            self.controls[name] = widget
+            print(f"  添加控件: {name}")
+
+        @temp_registry.register("style")
+        def temp_style(class_name, *props):
+            d = {}
+            for p in props:
+                if "=" in p:
+                    k, v = p.split("=", 1)
+                    d[k] = v.strip('"')
+            self.styles[class_name] = d
+
+        # 處理內容命令
+        for cmd_str in self.content_commands:
+            if cmd_str.strip():
+                tokens = shlex.split(cmd_str)
+                if tokens:
+                    cmd = tokens[0].lower()
+                    handler = temp_registry.get(cmd)
+                    if handler:
+                        try:
+                            handler(*tokens[1:])
+                        except Exception as e:
+                            print(f"處理popup內容指令錯誤: {e}")
+
+@registry.register("popup-send-data")
+def cmd_popup_send_data(app, from_popup, data, to_target):
+    """在popup窗口之間發送數據 - Send data between popup windows"""
+    print(f"發送數據: {from_popup} -> {to_target}: {data}")
+
+    # 如果目標是主窗口的控件
+    if to_target.startswith("main.") or "." in to_target and not to_target.startswith(("popup-", "child-")):
+        # 更新主窗口控件
+        if "." in to_target:
+            widget_name, attr = to_target.split(".", 1)
+            widget = app.controls.get(widget_name)
+            if widget:
+                if attr == "text" and hasattr(widget, 'config'):
+                    widget.config(text=str(data))
+                    print(f"更新主窗口控件 {widget_name}.text: {data}")
+                elif attr == "value" and hasattr(widget, 'delete'):
+                    widget.delete(0, 'end')
+                    widget.insert(0, str(data))
+                    print(f"更新主窗口控件 {widget_name}.value: {data}")
+        else:
+            # 存儲到應用變量
+            setattr(app, to_target, data)
+            print(f"儲存到應用變量 {to_target}: {data}")
+
+    # 如果目標是另一個popup窗口
+    elif hasattr(app, 'popup_windows') and from_popup in app.popup_windows:
+        # TODO: 實現popup間的數據傳輸
+        print(f"popup數據傳輸功能將在下版本實現")
+
+@registry.register("popup-close")
+def cmd_popup_close(app, window_id):
+    """關閉彈出窗口 - Close a popup window"""
+    if hasattr(app, 'popup_windows') and window_id in app.popup_windows:
+        popup = app.popup_windows[window_id]
+        popup.destroy()
+        del app.popup_windows[window_id]
+        print(f"關閉彈出窗口: {window_id}")
+
+@registry.register("popup-list")
+def cmd_popup_list(app, *args):
+    """列出所有彈出窗口 - List all popup windows"""
+    if hasattr(app, 'popup_windows'):
+        if app.popup_windows:
+            result = "當前彈出窗口:\n"
+            for name, window in app.popup_windows.items():
+                try:
+                    w = window.winfo_width()
+                    h = window.winfo_height()
+                    x = window.winfo_x()
+                    y = window.winfo_y()
+                    title = window.title()
+                    result += f"- {name}: {title} ({w}x{h}) at ({x},{y})\n"
+                except:
+                    result += f"- {name}: [已關閉]\n"
+
+            print(result)
+            # 顯示在狀態欄或其他控件中
+            if 'statusLabel' in app.controls:
+                app.controls['statusLabel'].config(text=result.strip())
+        else:
+            print("沒有啟用的彈出窗口")
+    else:
+        print("popup窗口系統尚未初始化")
+
+# ============== GUI變形指令補充 ==============
+
+@registry.register("window-maximize")
+def cmd_window_maximize(app, window_id):
+    """最大化窗口"""
+    if hasattr(app, 'popup_windows') and window_id in app.popup_windows:
+        popup = app.popup_windows[window_id]
+        popup.state('zoomed')
+    elif app.root and (window_id == "main" or window_id == app.root):
+        app.root.state('zoomed')
+    else:
+        print(f"窗口 {window_id} 不存在")
+
+@registry.register("window-minimize")
+def cmd_window_minimize(app, window_id):
+    """最小化窗口"""
+    if hasattr(app, 'popup_windows') and window_id in app.popup_windows:
+        popup = app.popup_windows[window_id]
+        popup.state('iconic')
+    elif app.root and (window_id == "main" or window_id == app.root):
+        app.root.state('iconic')
+    else:
+        print(f"窗口 {window_id} 不存在")
+
+@registry.register("window-hide")
+def cmd_window_hide(app, window_id):
+    """隱藏窗口"""
+    if hasattr(app, 'popup_windows') and window_id in app.popup_windows:
+        popup = app.popup_windows[window_id]
+        popup.withdraw()
+    elif app.root and (window_id == "main" or window_id == app.root):
+        app.root.withdraw()
+    else:
+        print(f"窗口 {window_id} 不存在")
+
+@registry.register("window-show")
+def cmd_window_show(app, window_id):
+    """顯示窗口"""
+    if hasattr(app, 'popup_windows') and window_id in app.popup_windows:
+        popup = app.popup_windows[window_id]
+        popup.deiconify()
+    elif app.root and (window_id == "main" or window_id == app.root):
+        app.root.deiconify()
+    else:
+        print(f"窗口 {window_id} 不存在")
+
+# ─── Entrypoint ──────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    script_path = sys.argv[1] if len(sys.argv) > 1 else "examples/demo.menu"
+
+    # Convert relative path to absolute if not provided
+    if not os.path.isabs(script_path):
+        script_path = os.path.join(os.path.dirname(__file__), script_path)
+
+    print(f"Loading MENU script: {script_path}")
+
+    # 初始化插件系统（如果有）
+    try:
+        from core.plugin_system import PluginManager, PluginCommandBus
+        print("Initializing plugin system...")
+        plugin_manager = PluginManager("menu-setup.json")
+        command_bus = PluginCommandBus(registry)
+        plugin_manager.command_bus = command_bus
+
+        # 初始化所有插件
+        plugin_manager.initialize_plugins()
+        plugin_info = plugin_manager.get_plugin_info()
+        print(f"Plugin system initialized: {plugin_info}")
+    except ImportError:
+        print("Plugin system not available")
+        command_bus = None
+
+    # 创建应用
+    app = MenuApp(script_path)
+
+    # 将指令总线传递给应用（供插件使用）
+    if command_bus:
+        app.command_bus = command_bus
+
+    app.build_ui()
+    print("MENU002 Application started successfully!")
+    
+    if command_bus:
+        print("Available commands from plugins:", list(command_bus.command_mapper.keys()))
+    
+    app.run()
