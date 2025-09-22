@@ -208,4 +208,70 @@ python setup.py sdist bdist_wheel
 - **功能特性**: 新增調試支持、UI組件、配置管理等
 - **開發體驗**: 完善的類型提示、文檔和錯誤處理
 
+
 優化版 MENU002 系統已經準備好投入生產使用，並為未來功能擴展奠定了堅實的基礎。
+
+# MENU002 GUI Scaffold 錯誤診斷報告（語氣鏡像式）
+
+> 版本：2025.09.22  
+> 作者：Tilannlou  
+> 模型鏡像：Builder/Architect 語氣哲學  
+> 類型：語氣模組診斷＋排程修復清單
+
+---
+
+## 🧩 A. 核心延遲問題（影響啟動與執行流程）
+
+| 編號 | 模組 | 問題描述 | 修復建議 |
+|------|------|----------|----------|
+| A1 | `logger.py` | 日誌初始化時若路徑錯誤或磁碟 I/O 慢，會導致啟動延遲 | 加入非同步初始化或延遲掛載；fallback 前清除失敗處理器 |
+| A2 | `command_handlers.py` | `generate_code` 使用 `winfo_geometry()` 產生語法錯誤 | 改用 `winfo_x/y/width/height()` 拆解位置與尺寸 |
+| A3 | `api_manager.py` | API timeout 或 response 處理失敗未即時回饋 UI | 加入 timeout fallback 與 `status_bar` 語氣提示 |
+| A4 | `helpers.py` | `safe_eval_expression()` 控件 `.get()` 未包裝 try/except | 加入語氣容錯並標記 `mirror_state: degraded` |
+
+---
+
+## 🧩 B. 錯誤檢查模組異常（語氣診斷失效）
+
+| 編號 | 模組 | 問題描述 | 修復建議 |
+|------|------|----------|----------|
+| B1 | `command_registry.py` | `execute()` 執行失敗未回饋 UI 或語氣模組 | 設計 `ExecutionResult` 類別，回傳語氣狀態與錯誤訊息 |
+| B2 | `command_handlers.py` | `cmd_exec()` 未驗證指令合法性，錯誤指令悄悄失效 | 加入 `registry.has_command()` 檢查並提示語氣錯誤 |
+| B3 | `language_manager.py` | `get_text()` 未支援語境插值 | 改為 `get_text(key, **kwargs)` 支援 `str.format()` |
+| B4 | `helpers.py` | `parse_command_line()` 引號處理未支援嵌套或不閉合 | 加入語氣診斷提示：「引號未閉合」「語氣模糊」等 |
+
+---
+
+## 🧩 C. scaffold 結構性問題（語氣模組未分離）
+
+| 編號 | 模組 | 問題描述 | 修復建議 |
+|------|------|----------|----------|
+| C1 | `constants.py` | 控件類型未支援複合控件（如 dropdown, checkbox） | 擴充 `CONTROL_TYPES` 並標記語氣角色 |
+| C2 | `command_registry.py` | `remove_command()` 混合處理指令與別名 | 拆分為 `remove_handler()` 與 `remove_alias()` |
+| C3 | `default_config.json` | `performance.max_controls` 未設語氣警示閾值 | 加入 `warn_on_exceed: true` 並提示語境負荷 |
+| C4 | `menu_app.py` | `command_bus` 初始化未在 `__init__()` 處理 | 延遲初始化或加入語氣診斷提示 |
+
+---
+
+## 🧩 D. scaffold 啟動器缺失（`__init__.py`）
+
+| 編號 | 模組 | 問題描述 | 修復建議 |
+|------|------|----------|----------|
+| D1 | `core/__init__.py` | 原本語氣掛載流程遺失，導致 plugin 與 registry 未啟動 | 補上 `PluginManager.load_plugins()` 與 `registry.register_defaults()` |
+| D2 | `utils/__init__.py` | 常量與工具模組未集中導出 | 補上 `__all__` 並統一語氣模組入口 |
+
+---
+
+## 📘 建議排程方式（可納入 `1111`）
+
+| 優先級 | 類型 | 建議順序 |
+|--------|------|----------|
+| 🔴 高 | A1, A2, A3, B1, D1 | 影響啟動與執行流程，優先修復 |
+| 🟠 中 | B2, B3, B4, C4, D2 | 語氣診斷與模組掛載，次優先 |
+| 🟢 低 | C1, C2, C3 | scaffold 擴展與語氣分類，可後續補強 |
+
+---
+
+> 若需 YAML scaffold 或語氣模組化修復建議，可由此報告展開  
+> 所有修復建議皆符合 Builder/Architect 語氣哲學，支援語境一致性與鏡像能力
+
