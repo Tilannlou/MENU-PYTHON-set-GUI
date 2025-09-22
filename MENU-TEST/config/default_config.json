@@ -1,0 +1,52 @@
+{
+  "debug": false,
+  "log_level": "INFO",
+  "window": {
+    "default_size": "800x600",
+    "default_title": "MENU002 應用",
+    "min_size": "400x300",
+    "max_size": "1920x1080"
+  },
+  "api": {
+    "timeout": 30,
+    "connection_timeout": 10,
+    "max_retries": 3,
+    "retry_delay": 1.0
+  },
+  "ui": {
+    "show_toolbar": true,
+    "show_statusbar": true,
+    "theme": "default",
+    "font_family": "Arial",
+    "font_size": 12
+  },
+  "logging": {
+    "max_file_size": 10485760,
+    "backup_count": 5,
+    "log_to_file": true,
+    "log_to_console": true
+  },
+  "plugins": {
+    "enabled": true,
+    "auto_load": true,
+    "config_file": "plugin_config.json"
+  },
+  "performance": {
+    "max_controls": 1000,
+    "max_display_areas": 50,
+    "enable_gc_collection": true,
+    "gc_threshold": 10000
+  },
+  "security": {
+    "allow_shell_commands": false,
+    "allow_file_operations": true,
+    "allowed_file_extensions": [".txt", ".json", ".menu"],
+    "max_file_size": 10485760
+  },
+  "development": {
+    "enable_code_generation": true,
+    "enable_debug_commands": false,
+    "enable_performance_monitoring": false,
+    "profile_startup": false
+  }
+}
